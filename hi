@@ -1,0 +1,7 @@
+// hello world
+
+public class hi{
+  public static void ( String [] args ){
+    system.out.println("hello world");
+    }
+ }   
