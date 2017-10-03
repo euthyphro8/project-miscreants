@@ -1,12 +1,26 @@
 package {
 
     import starling.display.Sprite;
-    import starling.text.TextField;
+    import starling.display.Image;
+//    import starling.display.Sprite3D;
+    import starling.textures.Texture;
 
     public class Game extends Sprite {
+
+        [Embed(source="/circle.png")]
+        public static const Circle:Class;
+
         public function Game() {
-            var textField:TextField = new TextField(400, 300, "Welcome to Starling!");
-            addChild(textField);
+            var tCircle:Texture = Texture.fromEmbeddedAsset(Circle);
+            var iCircle:Image = new Image(tCircle);
+            iCircle.x = 20;
+            iCircle.y = 20;
+
+            addChild(iCircle);
         }
+        public function update() {
+
+        }
+
     }
 }
