@@ -18,9 +18,5 @@ package {
 
             addChild(iCircle);
         }
-        public function update() {
-
-        }
-
     }
 }
