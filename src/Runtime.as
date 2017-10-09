@@ -8,7 +8,7 @@ package {
         private var _starling:Starling;
 
         public function Runtime() {
-            _starling = new Starling(Game, stage);
+            _starling = new Starling(Manager, stage);
             _starling.start();
 
         }
