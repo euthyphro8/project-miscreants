@@ -4,8 +4,6 @@ import starling.textures.Texture;
 
 public class Entity {
 
-
-
     var position:Vector.<Number>;
     var velocity:Vector.<Number>;
 

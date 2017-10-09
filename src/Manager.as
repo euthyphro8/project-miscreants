@@ -10,13 +10,28 @@ package {
         [Embed(source="/circle.png")]
         public static const Circle:Class;
 
-        public function Manager() {
-            var tCircle:Texture = Texture.fromEmbeddedAsset(Circle);
-            var iCircle:Image = new Image(tCircle);
-            iCircle.x = 20;
-            iCircle.y = 20;
+        var _state:Number;
+        var _menu:Menu
+        var _game:Game;
+        var _win:Win;
 
-            addChild(iCircle);
+        public function Manager() {
+            _state = 1;
+            _menu = new Menu();
+            _game = new Game();
+            _win = new Win();
+        }
+        public function setState(newState:Number) {
+            if (newState == 0 || newState == 1 || newState == 2 || newState == 3) {
+                _state = newState;
+            }else {
+                trace("Error: Invalid state!");
+            }
+
+        }
+
+        public function update() {
+
         }
     }
 }
