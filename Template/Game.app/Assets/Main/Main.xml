@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:e14197338f02936b97a3008d5b74ae2c:431beaaa533566349e764385245985cc:db040c881ec3dbc4b54735db7dc647c6$ -->
+<TextureAtlas imagePath="Main.png" width="1922" height="1761">
+    <SubTexture name="Arrow" x="1" y="1485" width="326" height="275"/>
+    <SubTexture name="Background" x="1" y="1" width="1920" height="1080"/>
+    <SubTexture name="Button_Background" x="329" y="1485" width="308" height="110"/>
+    <SubTexture name="English_Flag" x="1" y="1083" width="740" height="400"/>
+    <SubTexture name="Example_Font" x="1485" y="1083" width="406" height="407"/>
+    <SubTexture name="Pirate_Flag" x="743" y="1083" width="740" height="400"/>
+</TextureAtlas>

@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="UTF-16"?>
+
+<Service
+	Screen_Layout_Type="2"
+	Keypad_Input_Type="LSB"
+	Log_Entries_Per_Page="20"
+	Enable_Touch_Screen_Buttons="TRUE"
+	Progressives_Enabled="TRUE"
+>
+	<Game_Recall	X="0"	Y="0"		Width="1280"	Height="500" Alpha="1.0"	/>
+	<Game_Recall_Message_Area		X="25"	Y="1676"	Width="1030"	Height="125"	Font="System_Font"	HAlign="left"	VAlign="top"	Align_Pivot="FALSE"		/>
+	<Mystery_Bonus_Message_Area		X="25"	Y="344"		Width="1030"	Height="75"		Font="System_Font"	HAlign="left"	VAlign="top"	Align_Pivot="FALSE"		/>
+	<Game_Recall_Carousel_Object	X="115"	Y="930"		Texture="Object_1x"		Align_Pivot="TRUE"	/>
+	<Game_Recall_Freespin_Selection	X="964"	Y="930"		Texture="Freespin_1"	Align_Pivot="TRUE"	/>
+
+	<Menu>
+		<Item		Name="Meters"				Button="Meters"						X="20"	Y="100" />
+		<Item		Name="Volume"				Button="Volume"						X="20"	Y="190" />
+		<Item		Name="Logs_Menu"			Button="Logs"						X="20"	Y="280" />
+		<Item		Name="Settings"				Button="Settings"					X="20"	Y="370" />
+		<Item		Name="Versions"				Button="Versions"					X="20"	Y="460" />
+
+		<Item		Name="Peripheral_Test"		Button="Peripheral&#xA;Test"		X="240"	Y="100" />
+		<Item		Name="IO_Test"				Button="IO Test"					X="240"	Y="190" />
+		<Item		Name="Lockout"				Button="Lock EGM"					X="240"	Y="280" />
+		<Item		Name="Game_Recall"			Button="Game Recall"				X="240"	Y="370" />
+		<Item		Name="Verify_EGM"			Button="Verify EGM"					X="240"	Y="460" />
+
+		<Item		Name="Game_Setup"			Button="Game Setup"					X="460"	Y="100" />
+		<Item		Name="Game_Information"		Button="Game&#xA;Information"		X="460"	Y="190" />
+		<Item		Name="Calibrate_TS"			Button="Calibrate&#xA;Touch Screen"	X="460"	Y="280" />
+		<Item		Name="Calibration_Test"		Button="Calibration&#xA;Test"		X="460"	Y="370" />
+		<Item		Name="Progressive_Setup"	Button="Progressive&#xA;Setup"		X="460"	Y="460" />
+		
+		<Item		Name="Paycheck"				Button="Paycheck&#xA;Test"			X="680"	Y="100" />
+	</Menu>
+
+	<Meters>
+	
+		<Page	Title="Main"	>
+			<Meter	Name="COIN_IN"					Type="DOLLAR"	Description="Coin In" />
+			<Meter	Name="COIN_OUT"					Type="DOLLAR"	Description="Coin Out" />
+			<Meter	Name="COIN_DROP"				Type="DOLLAR"	Description="Coin Drop" />
+			<Meter	Name="TOTAL_DROP"				Type="DOLLAR"	Description="Total Drop" />
+			<Meter	Name="TOTAL_DROP_COUNT"			Type="COUNT"	Description="Total Drop Count" />
+			<Meter	Name="AP_JACKPOTS"				Type="DOLLAR"	Description="Attendant Paid Jackpots" />
+			<Meter	Name="AP_CANCELLED_CREDITS"		Type="DOLLAR"	Description="Attendant Paid Cancelled Credits" />
+			<Meter	Name="PHYSICAL_COIN_IN"			Type="DOLLAR"	Description="Physical Coin In" />
+			<Meter	Name="PHYSICAL_COIN_OUT"		Type="DOLLAR"	Description="Physical Coin Out" />
+			<Meter	Name="MP_PAYTABLE_WIN"			Type="DOLLAR"	Description="Machine Paid Paytable Win" />
+			<Meter	Name="AP_PAYTABLE_WIN"			Type="DOLLAR"	Description="Attendant Paid Paytable Win" />
+			<Meter	Name="MP_PROGRESSIVE_PAYOUT"	Type="DOLLAR"	Description="Machine Paid Progressive Win" />
+			<Meter	Name="AP_PROGRESSIVE_PAYOUT"	Type="DOLLAR"	Description="Attendant Paid Progressive Win" />
+		</Page>
+
+		<Page	Title="Games"	>
+			<Meter	Name="GAMES_PLAYED"				Type="COUNT"	Description="Games Played" />
+			<Meter	Name="GAMES_WON"				Type="COUNT"	Description="Games Won" />
+			<Meter	Name="GAMES_LOST"				Type="COUNT"	Description="Games Lost" />
+			<Meter	Name="GAMES_PLAYED_POWER"		Type="COUNT"	Description="Games Played (Power)" />
+			<Meter	Name="GAMES_PLAYED_DOOR"		Type="COUNT"	Description="Games Played (Door)" />
+		</Page>
+
+		<Page	Title="Doors"	>
+			<Meter	Name="SLOT_DOOR"				Type="COUNT"	Description="Slot Door Opens" />
+			<Meter	Name="LOGIC_DOOR"				Type="COUNT"	Description="Logic Door Opens" />
+			<Meter	Name="CASHBOX_DOOR"				Type="COUNT"	Description="Cashbox Door Opens" />
+		</Page>
+
+		<Page	Title="Bills"	>
+			<Meter	Name="BILL_IN"					Type="DOLLAR"	Description="Bill In" />
+			<Meter	Name="BILL_IN_COUNT"			Type="COUNT"	Description="Bill In Count" />
+			<Meter	Name="BILLS_IN_STACKER"			Type="DOLLAR"	Description="Bills In Stacker" />
+			<Meter	Name="BILLS_IN_STACKER_COUNT"	Type="COUNT"	Description="Bills In Stacker Count" />
+			<Meter	Name="BILL_REJECTED_COUNT"		Type="COUNT"	Description="Bills Rejected Count" />
+			<Meter	Name="BILL_IN_1"				Type="COUNT"	Description="Bills In ($1.00)" />
+			<Meter	Name="BILL_IN_2"				Type="COUNT"	Description="Bills In ($2.00)" />
+			<Meter	Name="BILL_IN_5"				Type="COUNT"	Description="Bills In ($5.00)" />
+			<Meter	Name="BILL_IN_10"				Type="COUNT"	Description="Bills In ($10.00)" />
+			<Meter	Name="BILL_IN_20"				Type="COUNT"	Description="Bills In ($20.00)" />
+			<Meter	Name="BILL_IN_50"				Type="COUNT"	Description="Bills In ($50.00)" />
+			<Meter	Name="BILL_IN_100"				Type="COUNT"	Description="Bills In ($100.00)" />
+			<Meter	Name="BILL_IN_500"				Type="COUNT"	Description="Bills In ($500.00)" />
+			<Meter	Name="BILL_IN_1000"				Type="COUNT"	Description="Bills In ($1000.00)" />
+		</Page>
+
+		<Page	Title="Cashless"	>
+			<Meter	Name="VOUCHER_IN"					Type="DOLLAR"	Description="Voucher In" />
+			<Meter	Name="VOUCHER_IN_COUNT"				Type="COUNT"	Description="Voucher In Count" />
+			<Meter	Name="VOUCHER_OUT"					Type="DOLLAR"	Description="Voucher Out" />
+			<Meter	Name="VOUCHER_OUT_COUNT"			Type="COUNT"	Description="Voucher Out Count" />
+			<Meter	Name="EFT_IN"						Type="DOLLAR"	Description="Electronic Funds Transfer In (EFT In)" />
+			<Meter	Name="EFT_OUT"						Type="DOLLAR"	Description="Electronic Funds Transfer Out (EFT Out)" />
+			<Meter	Name="WAT_IN"						Type="DOLLAR"	Description="Wagering Account Transfer In (WAT In)" />
+			<Meter	Name="WAT_OUT"						Type="DOLLAR"	Description="Wagering Account Transfer Out (WAT Out)" />
+			<Meter	Name="NON_CASHABLE_PROMO_IN"		Type="DOLLAR"	Description="Non-Cashable Electronic Promotion In" />
+			<Meter	Name="CASHABLE_PROMO_IN"			Type="DOLLAR"	Description="Cashable Electronic Promotion In" />
+			<Meter	Name="CASHABLE_PROMO_WAGERED"		Type="DOLLAR"	Description="Cashable Promotion Credits Wagered" />
+			<Meter	Name="NON_CASHABLE_PROMO_OUT"		Type="DOLLAR"	Description="Non-Cashable Electronic Promotion Out" />
+			<Meter	Name="CASHABLE_PROMO_OUT"			Type="DOLLAR"	Description="Cashable Electronic Promotion Out" />
+			<Meter	Name="COUPON_PROMO_IN"				Type="DOLLAR"	Description="Coupon Promotion In" />
+			<Meter	Name="COUPON_PROMO_OUT"				Type="DOLLAR"	Description="Coupon Promotion Out" />
+			<Meter	Name="MP_EXTERNAL_BONUS_PAYOUT"		Type="DOLLAR"	Description="Machine Paid External Bonus Payout" />
+			<Meter	Name="AP_EXTERNAL_BONUS_PAYOUT"		Type="DOLLAR"	Description="Attendant Paid External Bonus Payout" />
+		</Page>
+
+		<Page	Title="Progressives"	>
+			<Meter	Name="PROGRESSIVE_LEVEL_1_AMOUNT"	Type="DOLLAR"	Description="Progressive Level 1 Amount" />
+			<Meter	Name="PROGRESSIVE_LEVEL_1_HITS"		Type="COUNT"	Description="Progressive Level 1 Hits" />
+			<Meter	Name="PROGRESSIVE_LEVEL_2_AMOUNT"	Type="DOLLAR"	Description="Progressive Level 2 Amount" />
+			<Meter	Name="PROGRESSIVE_LEVEL_2_HITS"		Type="COUNT"	Description="Progressive Level 2 Hits" />
+			<Meter	Name="PROGRESSIVE_LEVEL_3_AMOUNT"	Type="DOLLAR"	Description="Progressive Level 3 Amount" />
+			<Meter	Name="PROGRESSIVE_LEVEL_3_HITS"		Type="COUNT"	Description="Progressive Level 3 Hits" />
+			<Meter	Name="PROGRESSIVE_LEVEL_4_AMOUNT"	Type="DOLLAR"	Description="Progressive Level 4 Amount" />
+			<Meter	Name="PROGRESSIVE_LEVEL_4_HITS"		Type="COUNT"	Description="Progressive Level 4 Hits" />
+			<Meter	Name="PROGRESSIVE_LEVEL_5_AMOUNT"	Type="DOLLAR"	Description="Progressive Level 5 Amount" />
+			<Meter	Name="PROGRESSIVE_LEVEL_5_HITS"		Type="COUNT"	Description="Progressive Level 5 Hits" />
+			<Meter	Name="PROGRESSIVE_LEVEL_6_AMOUNT"	Type="DOLLAR"	Description="Progressive Level 6 Amount" />
+			<Meter	Name="PROGRESSIVE_LEVEL_6_HITS"		Type="COUNT"	Description="Progressive Level 6 Hits" />
+			<Meter	Name="PROGRESSIVE_LEVEL_7_AMOUNT"	Type="DOLLAR"	Description="Progressive Level 7 Amount" />
+			<Meter	Name="PROGRESSIVE_LEVEL_7_HITS"		Type="COUNT"	Description="Progressive Level 7 Hits" />
+			<Meter	Name="PROGRESSIVE_LEVEL_8_AMOUNT"	Type="DOLLAR"	Description="Progressive Level 8 Amount" />
+			<Meter	Name="PROGRESSIVE_LEVEL_8_HITS"		Type="COUNT"	Description="Progressive Level 8 Hits" />
+		</Page>
+
+		<!--Page	Title="Gamble"	>
+			<Meter	Name="GAMBLE_GAMES_PLAYED"			Type="COUNT"	Description="Gamble Game Count" />
+			<Meter	Name="GAMBLE_GAMES_WON"				Type="COUNT"	Description="Gamble Game Wins" />
+			<Meter	Name="GAMBLE_WAGER"					Type="DOLLAR"	Description="Gamble Amount Played" />
+			<Meter	Name="GAMBLE_WON"					Type="DOLLAR"	Description="Gamble Amount Won" />
+		</Page-->
+		
+	</Meters>
+
+	<Settings>
+		<Page	Title="Main"	Settings="ASSET_NUMBER,MACHINE_NUMBER,SERIAL_NUMBER,FLOOR_LOCATION,PROG_ADDRESS" />
+		<Page	Title="Game"	Settings="GAMBLE_FEATURE,MAXIMUM_BET,STOP_REELS" />
+		<Page	Title="Limits"	Settings="CREDIT_LIMIT,JACKPOT_LIMIT,FUNDS_TRANSFER_LIMIT,BILL_IN_LIMIT,TICKET_IN_LIMIT,TICKET_OUT_LIMIT,MONEY_IN_LIMIT" />
+		<Page	Title="System"	Settings="SAS_ADDRESS,SYSTEM_TIMEOUT,VALIDATION_TYPE,FUNDS_TRANSFER_TYPE,BONUS_TYPE,TICKET_REDEMPTION,RESTRICTED_TICKETS_OUT,PARTIAL_TRANSFERS,HOST_CASHOUT" />
+	</Settings>
+	
+	<Logs>
+		<Item		Name="Event_Log"		Description="Event" 		X="20"	Y="100" />
+		<Item		Name="Door_Log"			Description="Door"			X="20"	Y="190" />
+		<Item		Name="Bill_Log"			Description="Bill" 			X="20"	Y="280" />
+		<Item		Name="Transaction_Log"	Description="Transaction" 	X="20"	Y="370" />
+		<Item		Name="Tilt_Log"			Description="Tilt" 			X="20"	Y="460" />
+
+		<Item		Name="Voucher_In_Log"	Description="Voucher In" 	X="240"	Y="100" />
+		<Item		Name="Voucher_Out_Log"	Description="Voucher Out" 	X="240"	Y="190" />
+		<Item		Name="Bonus_Log"		Description="Bonus" 		X="240"	Y="280" />
+		<Item		Name="Progressive_Log"	Description="Progressive" 	X="240"	Y="370" />
+	</Logs>
+
+	<Verification>
+		<Verify_Button		X="20"	Y="100"		/>
+		<Seed_Button		X="20"	Y="190"		/>
+		<Seed_Type_Button	X="20"	Y="280"		/>
+		<Result_Area		X="20"	Y="400"		/>
+		<Seed_Area			X="20"	Y="450"		/>
+	</Verification>
+	
+	<Progressive_Setup>
+		<Group_Button			X="20"	Y="100"		/>
+		<Type_Button			X="20"	Y="190"		/>
+		<Level_Button			X="240"	Y="100"		/>
+		<Level_Button			X="240"	Y="190"		/>
+		<Level_Button			X="240"	Y="280"		/>
+		<Level_Button			X="240"	Y="370"		/>
+		<Level_Button			X="460"	Y="100"		/>
+		<Level_Button			X="460"	Y="190"		/>
+		<Level_Button			X="460"	Y="280"		/>
+		<Level_Button			X="460"	Y="370"		/>
+
+		<Current_Amount_Button	X="20"	Y="100" 	/>
+		<Reset_Amount_Button	X="20"	Y="190"		/>
+		<Percentage_Button		X="20"	Y="280"		/>
+
+		<Configuration_Area
+			X="700"	Y="100"
+			Width="550"	Height="500"
+			Font="System_Font"
+			HAlign="left"
+			VAlign="top"
+			Align_Pivot="FALSE"
+		/>	
+	</Progressive_Setup>
+	
+	<IO_Test>
+		<Port_Area		X="100"	Y="100"		Width="300"	Height="550"	/>
+		<Value_Area		X="700"	Y="100"		Width="300"	Height="550"	/>
+
+		<Item		Name="Slot Door"				Port="SLOT_DOOR_SW"			On="CLOSED"		Off="OPENED"	/>
+		<Item		Name="Logic Door"				Port="LOGIC_DOOR_SW"		On="CLOSED"		Off="OPENED"	/>
+		<Item		Name="Belly Door"				Port="BELLY_DOOR_SW"		On="CLOSED"		Off="OPENED"	/>
+		<Item		Name="Cashbox Door"				Port="CASHBOX_DOOR_SW"		On="CLOSED"		Off="OPENED"	/>
+		<Item		Name="Drop Door"				Port="DROP_DOOR_SW"			On="CLOSED"		Off="OPENED"	/>
+		<Item		Name="Deal/Repeat Bet Button"	Port="SPIN_BTN"				On="PRESSED"	Off="RELEASED"	/>
+		<Item		Name="W2G Reset Switch"			Port="W2G_RESET_SW"			On="ON"			Off="OFF"		/>
+	</IO_Test>	
+</Service>

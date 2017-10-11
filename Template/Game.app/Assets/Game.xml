@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Engine>
+
+	<Game>
+		
+		<Background				X="0"		Y="0"		Texture="Background"			/>
+		<Arrow_Image			X="261"		Y="814"		Texture="Arrow"					Align_Pivot="TRUE"		/>
+		<Flag_Image				X="1390"	Y="600"		Texture="English_Flag"			Align_Pivot="TRUE"		/>
+		<Language_Button		X="447"		Y="550"		Texture="Button_Background"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
+		<Instruction_Area		X="960"		Y="150"		Width="1920"		Height="350"	Font="Example_Font"				/>
+		
+	</Game>
+</Engine>

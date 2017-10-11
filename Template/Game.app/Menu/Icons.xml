@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:35d7d6d76358a4e47e2b0f9b72f9ee9b:c8765f430a484d479b5555c5fd965c8a:6eb266a62a8c9fdb4972defefb2437b1$ -->
+<TextureAtlas imagePath="Icons.png">
+    <SubTexture name="Icons_0000" x="2" y="2" width="292" height="212"/>
+    <SubTexture name="Icons_0001" x="182" y="216" width="218" height="202"/>
+    <SubTexture name="Icons_0002" x="2" y="216" width="178" height="211"/>
+</TextureAtlas>

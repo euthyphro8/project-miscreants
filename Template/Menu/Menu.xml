@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-16"?>
+<Menu>
+
+	<Background	Top_Left="0x7F7F7F"	Top_Right="0x1F1F1F"	Bottom_Left="0xffffff"	Bottom_Right="0x7F7F7F" />
+
+	<Games>
+
+		<Game ID="Icons_0000"	Directory="Assets" 				X="332"	Y="172"	/>
+
+	</Games>
+</Menu>
