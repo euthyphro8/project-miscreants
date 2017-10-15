@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:68b7807efa76951336cf85d3b56e8fa3:2f5d79e5f4c6531edc8896dd3b7623ee:6a66e9663acb591be9a52f7ab88844de$ -->
+<TextureAtlas imagePath="Core.png" width="1028" height="1016">
+    <SubTexture name="Attendant_Font" x="1" y="1" width="512" height="512"/>
+    <SubTexture name="Exit_Button" x="861" y="735" width="48" height="48"/>
+    <SubTexture name="Grid" x="713" y="903" width="100" height="100"/>
+    <SubTexture name="Jackpot_Font" x="503" y="515" width="256" height="256"/>
+    <SubTexture name="Keypad" x="1" y="515" width="500" height="500"/>
+    <SubTexture name="Keypad_Button" x="761" y="735" width="98" height="65"/>
+    <SubTexture name="Minus_Button" x="761" y="802" width="50" height="50"/>
+    <SubTexture name="Plus_Button" x="813" y="802" width="50" height="50"/>
+    <SubTexture name="Pointer" x="761" y="663" width="100" height="70"/>
+    <SubTexture name="Service_Button" x="503" y="903" width="208" height="78"/>
+    <SubTexture name="System_20_Font" x="503" y="773" width="256" height="128"/>
+    <SubTexture name="System_Font" x="761" y="515" width="146" height="146"/>
+    <SubTexture name="System_Message_Font" x="515" y="1" width="512" height="512"/>
+</TextureAtlas>
