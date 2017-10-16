@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="Project Miscreants">
+    <configurations>
+      <configuration name="Project Miscreants" target-platform="Desktop" pure-as="true" main-class="Runtime" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/Miscreants">
+        <dependencies>
+          <entries>
+            <entry library-name="AS3RD_Party" library-level="application">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Game_Library" library-level="application">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Starling 2.2" library-level="application">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="AIRSDK_Compiler" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Runtime-app.xml" package-file-name="Project_Miscreants" />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Template" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/rsc" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="AIRSDK_Compiler" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="AS3RD_Party" level="application" />
+    <orderEntry type="library" exported="" name="Game_Library" level="application" />
+    <orderEntry type="library" exported="" name="Starling 2.2" level="application" />
+  </component>
+</module>
