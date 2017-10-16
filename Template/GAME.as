@@ -59,7 +59,7 @@ package
 			_Math_Config 	= Assets.getXml("Math");
 			
 			//Locality stores information about strings and different languages. 
-			_Locality 		= new LOCALITY(Assets.getXml("Locality"));
+			_Locality 		= new LOCALITY(Assets.getXml("Locality1"));
 			Locality.addEventListener(LOCALITY.EVENT_LANGUAGE_CHANGED, Locality_Handler);
 			
 			//Random Numbers will allow you to get random numbers from the core. 
