@@ -35,7 +35,6 @@ package
 		public function GAME(directory:String)
 		{
 			_Directory = directory + "/";
-
 			_Asset_Loader = new AssetLoader(Directory, Asset_Loader_Handler);
 			Asset_Loader.Add_Directory(Directory);
 			Asset_Loader.Start();
@@ -59,7 +58,7 @@ package
 			_Math_Config 	= Assets.getXml("Math");
 			
 			//Locality stores information about strings and different languages. 
-			_Locality 		= new LOCALITY(Assets.getXml("Locality1"));
+			_Locality 		= new LOCALITY(Assets.getXml("Locality"));
 			Locality.addEventListener(LOCALITY.EVENT_LANGUAGE_CHANGED, Locality_Handler);
 			
 			//Random Numbers will allow you to get random numbers from the core. 
