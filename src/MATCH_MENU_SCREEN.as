@@ -24,7 +24,7 @@ package {
 		public function MATCH_MENU_SCREEN(game:GAME, assets:AssetManager) {
 			var config:XML = assets.getXml("Game");
 			
-			
+			Start_Message = new E_TEXT(assets, config.Menu.Start_Message);
 			Start_Button = new E_BUTTON(assets, config.Game.Start_Button);
 			Modifier_One_Button = new E_BUTTON(assets, config.Game.Modifier_One_Button);
 			Modifier_Two_Button = new E_BUTTON(assets, config.Game.Modifier_Two_Button);
