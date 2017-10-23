@@ -42,21 +42,37 @@ package {
 			_Config	= Assets.getXml("Game");
 			_Math_Config = Assets.getXml("Math");
 			
-			Menu = new MATCH_MENU_SCREEN(this, _Assets);
-			//Game = new MATCH_GAME_SCREEN();
-			//Win = new MATCH_WIN_SCREEN();
+			Menu = new MATCH_MENU_SCREEN(_Assets);
+			Game = new MATCH_GAME_SCREEN(_Assets);
+			Win = new MATCH_WIN_SCREEN();
 			
-			Add_Children([Menu]);//, Game, Win]);
+			Add_Children([Menu, Game, Win]);
 			
 			this.addEventListener(Event.ENTER_FRAME, Enter_Frame_Handler);
 			Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKey_Down);
 		}
 
 		private function Enter_Frame_Handler():void {
+			Menu.Start_Message.Text = "Hedo Everynyan!";
 		}
 		
 		private function onKey_Down(keyEvent:KeyboardEvent):void {
 			
+		}
+		
+		public static function change_State(state:int):void {
+			if (state == 0) {
+				//Exit
+			}else if (state == 1) {
+				//Menu Screen
+				state = 1;
+			}else if (state == 2) {
+				//Game Screen
+				state = 2;
+			}else if (state == 3) {
+				//Win Screen
+				state = 3;
+			}
 		}
 		
 		

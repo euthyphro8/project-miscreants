@@ -10,49 +10,75 @@ package {
 	import starling.core.Starling;
 	import starling.display.Sprite;
 	
-	public class MATCH_MENU_SCREEN extends Sprite {
+	public class MATCH_MENU_SCREEN extends DISPLAY {
 		
-		private var Start_Message:E_TEXT;
-		private var Modifier_Message:E_TEXT;
+		public var Start_Message:E_TEXT;
+		public var Modifier_Message:E_TEXT;
 		
-		private var Start_Button:E_BUTTON;
-		private var Modifier_One_Button:E_BUTTON;
-		private var Modifier_Two_Button:E_BUTTON;
-		private var Modifier_Three_Button:E_BUTTON;
-		private var Modifier_Four_Button:E_BUTTON;
+		public var Background_Image:E_IMAGE;
 		
-		public function MATCH_MENU_SCREEN(game:GAME, assets:AssetManager) {
+		public var Start_Button:E_BUTTON;
+		public var Modifier_One_Button:E_BUTTON;
+		public var Modifier_Two_Button:E_BUTTON;
+		public var Modifier_Three_Button:E_BUTTON;
+		public var Modifier_Four_Button:E_BUTTON;
+		
+		public function MATCH_MENU_SCREEN(assets:AssetManager) {
 			var config:XML = assets.getXml("Game");
 			
-			Start_Message = new E_TEXT(assets, config.Menu.Start_Message);
-			Start_Button = new E_BUTTON(assets, config.Game.Start_Button);
-			Modifier_One_Button = new E_BUTTON(assets, config.Game.Modifier_One_Button);
-			Modifier_Two_Button = new E_BUTTON(assets, config.Game.Modifier_Two_Button);
-			Modifier_Three_Button = new E_BUTTON(assets, config.Game.Modifier_Three_Button);
-			Modifier_Four_Button = new E_BUTTON(assets, config.Game.Modifier_Four_Button);
+			Start_Message = new E_TEXT(config.Menu.Start_Message);
+			Modifier_Message = new E_TEXT(config.Menu.Modifier_Message);
 			
-			Start_Message = new E_TEXT(config.Game.Start_Message);
-			Modifier_Message = new E_TEXT(config.Game.Modifier_Message);
 			
-			addChild(Start_Button);
-			addChild(Modifier_One_Button);
-			addChild(Modifier_Two_Button);
-			addChild(Modifier_Three_Button);
-			addChild(Modifier_Four_Button);
+			Background_Image	= new E_IMAGE(assets, config.Menu.Background);
+			
+			
+			Start_Button = new E_BUTTON(assets, config.Menu.Start_Button);
+			Modifier_One_Button = new E_BUTTON(assets, config.Menu.Modifier_One_Button);
+			Modifier_Two_Button = new E_BUTTON(assets, config.Menu.Modifier_Two_Button);
+			Modifier_Three_Button = new E_BUTTON(assets, config.Menu.Modifier_Three_Button);
+			Modifier_Four_Button = new E_BUTTON(assets, config.Menu.Modifier_Four_Button);
+			
+			
+			Start_Message.Text = "Hedo Every-nyan";
+			
+			
+			Start_Button.Text = "Start Button";
+			Modifier_One_Button.Text = "x1";	
+			Modifier_Two_Button.Text = "x2";
+			Modifier_Three_Button.Text = "x3";
+			Modifier_Four_Button.Text = "x4";		
+			
+			
+			//For some reason must be added on same line or else text doesn't seem to work
+			Add_Children([ Background_Image, Start_Message, Modifier_Message, Start_Button, Modifier_One_Button, Modifier_Two_Button, Modifier_Three_Button, Modifier_Four_Button ]);
+			
 			
 			Start_Button.addEventListener(BUTTON.EVENT_TOUCHED, StartButton);
-			Modifier_One_Button.addEventListener(BUTTON.EVENT_TOUCHED, ModifierButton(1));
-			Modifier_Two_Button.addEventListener(BUTTON.EVENT_TOUCHED, ModifierButton(2));
-			Modifier_Three_Button.addEventListener(BUTTON.EVENT_TOUCHED, ModifierButton(3));
-			Modifier_Four_Button.addEventListener(BUTTON.EVENT_TOUCHED, ModifierButton(4));
+			Modifier_One_Button.addEventListener(BUTTON.EVENT_TOUCHED, SetModifierOne);
+			Modifier_Two_Button.addEventListener(BUTTON.EVENT_TOUCHED, SetModifierTwo);
+			Modifier_Three_Button.addEventListener(BUTTON.EVENT_TOUCHED, SetModifierThree);
+			Modifier_Four_Button.addEventListener(BUTTON.EVENT_TOUCHED, SetModifierFour);
+			
+			
+			
 			
 		}
 		
-		private function StartButton() {
-			//John will buy you a milkshake
-		}
-		private function ModifierButton(modifier:int) {
+		private function StartButton():void {
 			
+		}
+		private function SetModifierOne():void {
+			Modifier_Message.Text = "One";
+		}
+		private function SetModifierTwo():void {
+			Modifier_Message.Text = "Two";
+		}
+		private function SetModifierThree():void {
+			Modifier_Message.Text = "Three";
+		}
+		private function SetModifierFour():void {
+			Modifier_Message.Text = "Four";
 		}
 	}
 }

@@ -1,14 +1,20 @@
-package 
-{
+package  {
+	
 	/**
 	 * ...
 	 * @author Josh Hess
 	 */
-	public class TIER_DISPLAY 
-	{
+	
+	 
+	 
+	import Extended.*;
+	import starling.utils.AssetManager;
+	
+	
+	
+	public class TIER_DISPLAY extends DISPLAY {
 		
-		public function TIER_DISPLAY() 
-		{
+		public function TIER_DISPLAY(assets:AssetManager) {
 			
 		}
 		

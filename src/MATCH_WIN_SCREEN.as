@@ -4,8 +4,11 @@ package
 	 * ...
 	 * @author Josh Hess
 	 */
-	public class MATCH_WIN_SCREEN 
-	{
+	
+	 
+	import Extended.*;
+	
+	public class MATCH_WIN_SCREEN extends DISPLAY {
 		
 		public function MATCH_WIN_SCREEN() 
 		{
