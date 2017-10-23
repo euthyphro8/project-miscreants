@@ -1,9 +1,10 @@
-﻿// ---------------------------------------
+// ---------------------------------------
 //	Casino Game Maker, Inc.
 // ---------------------------------------
 
 package
 {
+	import Extended.E_SERVICE_BUTTON;
 	import starling.events.Event;
 	import Events.GAME_RECALL_EVENT;
 	import Events.KEYPAD_EVENT;
@@ -42,9 +43,9 @@ package
 
 			Buttons = new Array();
 			
-			for(var i=0; i<Config.Menu.Item.length(); i++)
+			for(var i:int = 0; i<Config.Menu.Item.length(); i++)
 			{
-				var button = new SERVICE_BUTTON(Assets, Config.Menu.Item[i].@Button);
+				var button:SERVICE_BUTTON = new SERVICE_BUTTON(Assets, Config.Menu.Item[i].@Button);
 				button.x = Config.Menu.Item[i].@X;
 				button.y = Config.Menu.Item[i].@Y;
 				button.name = Config.Menu.Item[i].@Name;
@@ -255,5 +256,3 @@ package
 		}
 	}
 }
-
-
