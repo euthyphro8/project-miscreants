@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Engine>
+	<Menu>
+		<Start_Message			X="400"		Y="400"		Width="1920"		Height="350"	Font="Example_Font"				/>
+		<Modifier_Message		X="200"		Y="200"		Width="1920"		Height="350"	Font="Example_Font"				/>
+		
+		<Background				X="0"		Y="0"		Texture="Background"			/>
+		
+		<Start_Button			X="960"		Y="360"		Texture="Button_Background"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
+		<Modifier_One_Button	X="291"		Y="720"		Texture="Button_Background"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
+		<Modifier_Two_Button	X="736"		Y="720"		Texture="Button_Background"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
+		<Modifier_Three_Button	X="1181" 	Y="720"		Texture="Button_Background"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
+		<Modifier_Four_Button	X="1626"	Y="720"		Texture="Button_Background"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
+	</Menu>
+	<Game>
+		
+	</Game>
+</Engine>

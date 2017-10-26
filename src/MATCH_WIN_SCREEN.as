@@ -10,8 +10,7 @@ package
 	
 	public class MATCH_WIN_SCREEN extends DISPLAY {
 		
-		public function MATCH_WIN_SCREEN() 
-		{
+		public function MATCH_WIN_SCREEN() {
 			
 		}
 		

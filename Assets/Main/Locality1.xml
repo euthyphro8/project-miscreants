@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Locality Languages="English,Pirate" >
+
+	<!-- Buttons -->
+
+	<Language_Button				English="Bullshit"
+									Pirate="American" />
+									
+	<Instruction_Message			English="Testing testing."
+									Pirate="Press the ’American’ button to change &#xD;&#xD; back to an American flag."		/>
+
+</Locality>
