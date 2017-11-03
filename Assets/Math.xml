@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Engine>
+		<!--Approximately two magnitudes apart-->
+		<GOD_MODE>	
+			Pool="1000000" 
+			T1Freq="1" 			T1Prob="0.000001"
+			T2Freq="99" 		T2Prob="0.000099"
+			T3Freq="9900" 		T3Prob="0.0099"
+			T4Freq="990000" 	T4Prob="0.99"
+		</GOD_MODE>
+	
+	
+		<!--Approximately single magnitudes apart-->
+		<Hard> 
+			Pool="1000"
+			T1Freq="1" 		T1Prob="0.001"
+			T2Freq="9" 		T2Prob="0.009"
+			T3Freq="90" 	T3Prob="0.09"
+			T4Freq="900" 	T4Prob="0.9"
+		</Hard>
+		
+		<!-- Approximately half magnitudes apart-->
+		<Medium>
+			Pool="10000"
+			T1Freq="63" 	T1Prob="0.0063"
+			T2Freq="323" 	T2Prob="0.0323"
+			T3Freq="1602" 	T3Prob="0.1602"
+			T4Freq="8012" 	T4Prob="0.8012"
+		</Medium>
+		
+		<!--Approximately 1/3 magnitudes apart-->
+		<Easy>
+			Pool="1000"
+			T1Freq="25" 	T1Prob="0.025"
+			T2Freq="75" 	T2Prob="0.075"
+			T3Freq="225" 	T3Prob="0.225"
+			T4Freq="675" 	T4Prob="0.675"
+		</Easy>
+</Engine>
