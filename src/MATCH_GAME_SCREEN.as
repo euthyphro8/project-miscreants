@@ -1,8 +1,12 @@
 package  {
+	
 	import Extended.E_BUTTON;
 	import Extended.E_IMAGE;
+	import flash.display.MovieClip;
 	import starling.display.Sprite;
+	import starling.display.MovieClip;
 	import starling.utils.AssetManager;
+	import starling.core.Starling;
 	
 	public class MATCH_GAME_SCREEN extends DISPLAY 
 	{
@@ -24,6 +28,7 @@ package  {
 		{
 			Assets = assets;
 			var config:XML = assets.getXml("Game");
+			
 			
 			// ----------------------TODO: reference XML for payout values ------------------------
 			one = new TIER_DISPLAY(assets, 0, 540, "One",(String)(1000));
@@ -48,9 +53,13 @@ package  {
 			Win_Button._Button.y += 25;
 			Win_Button._Button.textFormat.size = 35;
 			
+			
+			Menu_Button.Text_Format.color = 0;
+			Win_Button.Text_Format.color = 0;
+			
 			entity_manager = new ENTITY_DISPLAY(this, assets, 0, 0);
 			
-			Add_Children([background, one, two, three, four, entity_manager, Menu_Button, Win_Button]);
+			Add_Children([background, one, two, three, four, entity_manager ]);//, Menu_Button, Win_Button]);
 			
 			Menu_Button.addEventListener(BUTTON.EVENT_RELEASED, Menu_Button_Event);
 			Win_Button.addEventListener(BUTTON.EVENT_RELEASED, Win_Button_Event);
@@ -74,7 +83,7 @@ package  {
 			{
 				pool.push(winning_Tier);
 			}
-			trace("NumPicks: " + numPicks);
+			trace("[MATCH_GAME_SCREEN] NumPicks: " + numPicks);
 			var freq:Array = new Array(0, 0, 0, 0);
 			for (i = 0; i < numPicks - (maxPicks - 1); i++)
 			{
@@ -82,7 +91,6 @@ package  {
 				while (pick == winning_Tier)
 				{
 					pick = Math.floor(Math.random() * 4) + 1;
-					trace("i, pick: " + i + ", " + pick);
 					if (freq[pick - 1] == (maxPicks - 1))
 						pick = winning_Tier;
 				}
@@ -140,6 +148,12 @@ package  {
 		{
 			GAME.Screen_State = 3;
 			GAME.Has_State_Changed = true;
+		}
+		
+		
+		public function Update():void 
+		{
+			entity_manager.Update();
 		}
 		
 	}

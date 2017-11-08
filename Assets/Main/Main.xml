@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
-<!-- $TexturePacker:SmartUpdate:c6ce2af3a835c5580ed5d3501017ed0d:f32dcaa74d73eb38c14825562a32dccf:db040c881ec3dbc4b54735db7dc647c6$ -->
-<TextureAtlas imagePath="Main.png" width="1922" height="1584">
-    <SubTexture name="Background" x="1" y="1" width="1920" height="1080"/>
-    <SubTexture name="Button" x="1413" y="1083" width="300" height="100"/>
-    <SubTexture name="Button_Selected" x="1413" y="1443" width="300" height="100"/>
-    <SubTexture name="Circle" x="1" y="1083" width="500" height="500"/>
-    <SubTexture name="Circle_Selected" x="503" y="1083" width="500" height="500"/>
-    <SubTexture name="Example_Font" x="1005" y="1083" width="406" height="407"/>
-    <SubTexture name="jigglypuff" x="1413" y="1185" width="238" height="256" frameX="-34" frameY="-25" frameWidth="307" frameHeight="307"/>
-    <SubTexture name="smallTiger" x="1715" y="1083" width="86" height="93" frameX="-7" frameY="-2" frameWidth="100" frameHeight="100"/>
+<!-- $TexturePacker:SmartUpdate:91b1ca86d9bd4b3bff2f338ddc206a19:9597ccdf58399b48e87eb2edddd3cbb1:db040c881ec3dbc4b54735db7dc647c6$ -->
+<TextureAtlas imagePath="Main.png" width="500" height="1914">
+    <SubTexture name="Button" x="0" y="0" width="300" height="100"/>
+    <SubTexture name="Button_Selected" x="0" y="100" width="300" height="100"/>
+    <SubTexture name="Circle" x="0" y="200" width="500" height="500"/>
+    <SubTexture name="Circle_Selected" x="0" y="700" width="500" height="500"/>
+    <SubTexture name="Example_Font" x="0" y="1200" width="406" height="407"/>
+    <SubTexture name="jigglypuff" x="0" y="1607" width="307" height="307"/>
+    <SubTexture name="smallTiger" x="307" y="1607" width="100" height="100"/>
 </TextureAtlas>
