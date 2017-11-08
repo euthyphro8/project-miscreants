@@ -38,9 +38,12 @@ package  {
 			Tier_Amount.Set_Position((int)(Display_Width / 2), (int)(Display_Height * .9));
 			
 			Tier_Text.Font_Size = 25;
+			Tier_Text.Text_Format.color = 0;
+			Tier_Text.Text = "Tier: " + tier_name;
+			
 			Tier_Amount.Font_Size = 25;
-			Tier_Text.Text = "Tier: "+tier_name;
 			Tier_Amount.Text = tier_amount;
+			Tier_Amount.Text_Format.color = 0;
 			
 			//Start_Button = new E_BUTTON(assets, config.Menu.Start_Button);
 			Tier_Background	= new E_IMAGE(assets, config.Tier.Jiggly);
@@ -56,7 +59,6 @@ package  {
 			Pick_Slot_Three.scale = (100./500);
 			Tier_Background.width = Display_Width;
 			Tier_Background.height = Display_Height;
-			
 			
 			
 			

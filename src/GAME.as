@@ -103,6 +103,8 @@ package {
 				Menu.Hide();
 				Game.Hide();
 				Win.Show();
+				Win.puff.play();
+				Starling.juggler.add(Win.puff);
 			}
 		}
 		

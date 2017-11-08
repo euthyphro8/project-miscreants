@@ -81,6 +81,14 @@ package {
 			Modifier_Four_Button._Button.y += 25;
 			Modifier_Four_Button._Button.textFormat.size = 35;
 			
+			Title.Text_Format.color = 0;
+			Start_Button.Text_Format.color = 0;
+			Modifier_Message.Text_Format.color = 0;
+			Modifier_One_Button.Text_Format.color = 0;
+			Modifier_Two_Button.Text_Format.color = 0;
+			Modifier_Three_Button.Text_Format.color = 0;
+			Modifier_Four_Button.Text_Format.color = 0;
+			
 			Add_Children([ Background_Image, Title, Modifier_Message, Start_Button, Modifier_One_Button, Modifier_Two_Button, Modifier_Three_Button, Modifier_Four_Button ]);
 			
 			Start_Button.addEventListener(BUTTON.EVENT_RELEASED, StartButton);

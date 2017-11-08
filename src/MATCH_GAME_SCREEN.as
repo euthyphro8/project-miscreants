@@ -48,9 +48,13 @@ package  {
 			Win_Button._Button.y += 25;
 			Win_Button._Button.textFormat.size = 35;
 			
+			
+			Menu_Button.Text_Format.color = 0;
+			Win_Button.Text_Format.color = 0;
+			
 			entity_manager = new ENTITY_DISPLAY(this, assets, 0, 0);
 			
-			Add_Children([background, one, two, three, four, entity_manager, Menu_Button, Win_Button]);
+			Add_Children([background, one, two, three, four, entity_manager ]);//, Menu_Button, Win_Button]);
 			
 			Menu_Button.addEventListener(BUTTON.EVENT_RELEASED, Menu_Button_Event);
 			Win_Button.addEventListener(BUTTON.EVENT_RELEASED, Win_Button_Event);

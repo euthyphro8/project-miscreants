@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Engine>
 	<Menu>
-		<Title					X="640"		Y="100"		Width="1280"	Height="240"	Font="Example_Font"		Text="Match Game"		/>
-		<Start_Message			X="400"		Y="400"		Width="400"		Height="350"	Font="Example_Font"		Text="Start Message"	/>
-		<Modifier_Message		X="470"		Y="405"		Width="800"		Height="350"	Font="Example_Font"		Text="Difficulty: "		HAlign="left" />
+		<Title					X="640"		Y="100"		Width="1280"	Height="240"	Font="InkyThinPixels"		Text="Match Game"		/>
+		<Start_Message			X="400"		Y="400"		Width="400"		Height="350"	Font="InkyThinPixels"		Text="Start Message"	/>
+		<Modifier_Message		X="470"		Y="405"		Width="800"		Height="350"	Font="InkyThinPixels"		Text="Difficulty: "		HAlign="left" />
 		
-		<Background				X="0"		Y="0"		Texture="Background"			/>
+		<Background				X="0"		Y="0"		Texture="autumn"			/>
 		
-		<Start_Button			X="640"		Y="270"	 	Text="Start" 	Texture="Button"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
-		<Modifier_One_Button	X="255"		Y="540"	 	Text="x1" 		Texture="Button"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
-		<Modifier_Two_Button	X="510"		Y="540"		Text="x2"		Texture="Button"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
-		<Modifier_Three_Button	X="765" 	Y="540" 	Text="x3"		Texture="Button"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
-		<Modifier_Four_Button	X="1020"	Y="540"		Text="x4"		Texture="Button"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
+		<Start_Button			X="640"		Y="270"	 	Text="Start" 	Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
+		<Modifier_One_Button	X="255"		Y="540"	 	Text="x1" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
+		<Modifier_Two_Button	X="510"		Y="540"		Text="x2"		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
+		<Modifier_Three_Button	X="765" 	Y="540" 	Text="x3"		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
+		<Modifier_Four_Button	X="1020"	Y="540"		Text="x4"		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 	</Menu>
 	
 	<Game>
-		<Menu_Button			X="640"		Y="35"	 	Text="Menu" 	Texture="Button"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
-		<Win_Button				X="640"		Y="135"	 	Text="Win" 		Texture="Button"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
+		<Menu_Button			X="640"		Y="35"	 	Text="Menu" 	Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
+		<Win_Button				X="640"		Y="135"	 	Text="Win" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 	</Game>
 	
 	<Tier>
-		<TierText					X="0"		Y="0"		Width="1920"		Height="350"	Font="Example_Font"				/>
-		<TierAmount					X="0"		Y="100"		Width="1920"		Height="350"	Font="Example_Font"				/>
+		<TierText					X="0"		Y="0"		Width="1920"		Height="350"	Font="InkyThinPixels"				/>
+		<TierAmount					X="0"		Y="100"		Width="1920"		Height="350"	Font="InkyThinPixels"				/>
 		
 		<Jiggly						X="0"		Y="0"		Texture="Button"			/>
 		<FirstBubble				X="0"		Y="0"		Texture="Circle"			/>
@@ -30,11 +30,11 @@
 	</Tier>
 	
 	<Entity>
-		<Entity_Button			X="0"		Y="0"	 	Text="" 	Texture="Circle"		Align_Pivot="TRUE"		Font="Example_Font"		Enabled="TRUE"	/>
+		<Entity_Button			X="0"		Y="0"	 	Text="" 	Texture="Circle"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 	</Entity>
 	
 	<Win>
-		<Title					X="640"		Y="100"		Width="1280"	Height="240"	Font="Example_Font"		Text="You Win! /Fireworks"		/>
+		<Title					X="640"		Y="100"		Width="1280"	Height="240"	Font="InkyThinPixels"		Text="You Win! /Fireworks"		/>
 		<Background				X="0"		Y="0"		Texture="Background"			/>
 		
 	</Win>
