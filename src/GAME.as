@@ -8,7 +8,9 @@ package {
 	import starling.events.*;
 	import starling.utils.AssetManager;
 	import starling.core.Starling;
-	import starling.display.Sprite;
+	import starling.textures.Texture;
+	import starling.text.TextField;
+	import starling.text.BitmapFont;
 	
 	public class GAME extends DISPLAY {
 		
@@ -56,6 +58,12 @@ package {
 			
 			this.addEventListener(Event.ENTER_FRAME, Update);
 			Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKey_Down);
+			
+			
+			var fontTexture:Texture = Assets.getTexture("InkyThinPixels_0");
+			var fontxml:XML = Assets.getXml("InkyThinPixels");
+			var InkyThinPixels:BitmapFont = new BitmapFont(fontTexture, fontxml); 
+			TextField.registerCompositor(InkyThinPixels, "InkyThinPixels");
 		}
 
 		private function Update():void 
@@ -65,6 +73,9 @@ package {
 				Set_State();
 				trace("[GAME] Changing State: " + Screen_State);
 				Has_State_Changed = false;
+			}
+			if (Screen_State == 2) {
+				Game.Update();
 			}
 		}
 		
@@ -103,8 +114,6 @@ package {
 				Menu.Hide();
 				Game.Hide();
 				Win.Show();
-				Win.puff.play();
-				Starling.juggler.add(Win.puff);
 			}
 		}
 		

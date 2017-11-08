@@ -14,12 +14,6 @@ package {
 	public class MATCH_MENU_SCREEN extends DISPLAY 
 	{
 		
-		private static const MODIFIER_MESSAGE:String			= "Difficulty: ";
-		private static const MODIFIER_ONE_MESSAGE:String 		= "Easy";
-		private static const MODIFIER_TWO_MESSAGE:String 		= "Medium";
-		private static const MODIFIER_THREE_MESSAGE:String 		= "Hard";
-		private static const MODIFIER_FOUR_MESSAGE:String 		= "God Mode";
-		
 		public var Modifier:int;
 		
 		public var Title:E_TEXT;
@@ -37,10 +31,14 @@ package {
 		public var Probabilities:XML;
 		public var Winning_Tier:int;
 		
+		public var Assets:AssetManager;
+		
 		public function MATCH_MENU_SCREEN(assets:AssetManager) 
 		{
 			var config:XML = assets.getXml("Game");
 			Probabilities = assets.getXml("Math");
+			
+			this.Assets = assets;
 			
 			Title = new E_TEXT(config.Menu.Title);
 			//Start_Message = new E_TEXT(config.Menu.Start_Message);
@@ -57,37 +55,46 @@ package {
 			Modifier_Three_Button = new E_BUTTON(assets, config.Menu.Modifier_Three_Button);
 			Modifier_Four_Button = new E_BUTTON(assets, config.Menu.Modifier_Four_Button);
 			
-			Modifier_One_Button._Button.width = 170;
-			Modifier_One_Button._Button.height = 60;
+			Modifier_One_Button._Button.width = 200;
+			Modifier_One_Button._Button.height = 70;
 			Modifier_One_Button._Button.x += 69;
 			Modifier_One_Button._Button.y += 25;
 			Modifier_One_Button._Button.textFormat.size = 35;
 			
-			Modifier_Two_Button._Button.width = 170;
-			Modifier_Two_Button._Button.height = 60;
+			Modifier_Two_Button._Button.width = 200;
+			Modifier_Two_Button._Button.height = 70;
 			Modifier_Two_Button._Button.x += 69;
 			Modifier_Two_Button._Button.y += 25;
 			Modifier_Two_Button._Button.textFormat.size = 35;
 			
-			Modifier_Three_Button._Button.width = 170;
-			Modifier_Three_Button._Button.height = 60;
+			Modifier_Three_Button._Button.width = 200;
+			Modifier_Three_Button._Button.height = 70;
 			Modifier_Three_Button._Button.x += 69;
 			Modifier_Three_Button._Button.y += 25;
 			Modifier_Three_Button._Button.textFormat.size = 35;
 			
-			Modifier_Four_Button._Button.width = 170;
-			Modifier_Four_Button._Button.height = 60;
+			Modifier_Four_Button._Button.width = 200;
+			Modifier_Four_Button._Button.height = 70;
 			Modifier_Four_Button._Button.x += 69;
 			Modifier_Four_Button._Button.y += 25;
 			Modifier_Four_Button._Button.textFormat.size = 35;
 			
 			Title.Text_Format.color = 0;
-			Start_Button.Text_Format.color = 0;
+			//Title.Text_Format.size = 35;
+			
 			Modifier_Message.Text_Format.color = 0;
+			Modifier_Message.Text_Format.size = 35;
+			
+			Start_Button.Text_Format.color = 0;
+			Start_Button.Text_Format.size = 35;
+			
 			Modifier_One_Button.Text_Format.color = 0;
 			Modifier_Two_Button.Text_Format.color = 0;
 			Modifier_Three_Button.Text_Format.color = 0;
 			Modifier_Four_Button.Text_Format.color = 0;
+			
+			
+			
 			
 			Add_Children([ Background_Image, Title, Modifier_Message, Start_Button, Modifier_One_Button, Modifier_Two_Button, Modifier_Three_Button, Modifier_Four_Button ]);
 			
@@ -142,23 +149,35 @@ package {
 		}
 		private function SetModifierOne():void 
 		{
-			Modifier_Message.Text = MODIFIER_MESSAGE + MODIFIER_ONE_MESSAGE;
 			Modifier = 1;
+			Modifier_One_Button.Texture = Assets.getTexture("Button_Selected");
+			Modifier_Two_Button.Texture = Assets.getTexture("Button");
+			Modifier_Three_Button.Texture = Assets.getTexture("Button");
+			Modifier_Four_Button.Texture = Assets.getTexture("Button");
 		}
 		private function SetModifierTwo():void 
 		{
-			Modifier_Message.Text = MODIFIER_MESSAGE + MODIFIER_TWO_MESSAGE;
 			Modifier = 2;
+			Modifier_One_Button.Texture = Assets.getTexture("Button");
+			Modifier_Two_Button.Texture = Assets.getTexture("Button_Selected");
+			Modifier_Three_Button.Texture = Assets.getTexture("Button");
+			Modifier_Four_Button.Texture = Assets.getTexture("Button");
 		}
 		private function SetModifierThree():void 
 		{
-			Modifier_Message.Text = MODIFIER_MESSAGE + MODIFIER_THREE_MESSAGE;
 			Modifier = 3;
+			Modifier_One_Button.Texture = Assets.getTexture("Button");
+			Modifier_Two_Button.Texture = Assets.getTexture("Button");
+			Modifier_Three_Button.Texture = Assets.getTexture("Button_Selected");
+			Modifier_Four_Button.Texture = Assets.getTexture("Button");
 		}
 		private function SetModifierFour():void 
 		{
-			Modifier_Message.Text = MODIFIER_MESSAGE + MODIFIER_FOUR_MESSAGE;
 			Modifier = 4;
+			Modifier_One_Button.Texture = Assets.getTexture("Button");
+			Modifier_Two_Button.Texture = Assets.getTexture("Button");
+			Modifier_Three_Button.Texture = Assets.getTexture("Button");
+			Modifier_Four_Button.Texture = Assets.getTexture("Button_Selected");
 		}
 	}
 }

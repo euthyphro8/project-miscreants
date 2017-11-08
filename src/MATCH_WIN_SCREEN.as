@@ -16,13 +16,6 @@ package
 		{
 			var config:XML = assets.getXml("Game");
 			
-			
-			
-			var frames:Vector.<Texture> = assets.getTextures("puff_default_");
-			puff = new MovieClip(frames, 10);
-			
-			
-			
 			Title = new E_TEXT(config.Win.Title);
 			
 			Title.Start_Flash(800, 400);
@@ -30,7 +23,7 @@ package
 			
 			Background_Image= new E_IMAGE(assets, config.Win.Background);
 			
-			Add_Children([ Background_Image, Title, puff]);
+			Add_Children([ Background_Image, Title]);
 			
 			
 			
