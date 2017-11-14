@@ -37,11 +37,11 @@ package
 			}
 			
 			Entity_Buttons = new <E_BUTTON>[];
-			for (var i:int = 0; i < Number_Of_Ents; i++) {
-				Entity_Buttons[i] = (new E_BUTTON(assets, config.Entity.Entity_Button));
+			for (i = 0; i < Number_Of_Ents; i++) {
+				Entity_Buttons[i] = (new E_BUTTON(assets, config.Tier.ChibiCoin));
 				//Entity_Buttons[i].Set_Position(i * 50, 50*(Math.random()*10));
 				Entity_Buttons[i].Set_Position(i*100,100*(Math.random()*4));
-				Entity_Buttons[i].scale = (100. / 500);
+				//Entity_Buttons[i].scale = (100. / 500);
 				Entity_Buttons[i].addEventListener(BUTTON.EVENT_TOUCHED, Entity_Button_Event(Entity_Buttons[i]));
 				Add_Children([Entity_Buttons[i]]);
 			}
@@ -67,10 +67,11 @@ package
 			var frames:Vector.<Texture> = Assets.getTextures("puff_" + type);
 			var anim:MovieClip = new MovieClip(frames, 10);
 			Anims.push(anim);
-			anim.scale = 0.5;
+			anim.scale = 0.6;
 			anim.x = x - (anim.width / 2);
 			anim.y = y - (anim.height / 2);
 			anim.loop = false;
+			//Set Color if possible
 			Add_Children([anim]);
 			Starling.juggler.add(anim);
 			anim.play();
@@ -85,8 +86,9 @@ package
 				if (anim.isComplete)
 				{
 					anim.stop();
+					removeChild(anim);
+					
 					Starling.juggler.remove(anim);
-					removeChild(anim)
 					Anims.removeAt(i);
 					i--;
 				}

@@ -20,12 +20,11 @@ package
 			
 			Title.Start_Flash(800, 400);
 			Title.Font_Size = 100;
+			Title.Text_Format.color = 0xFF0000;
 			
 			Background_Image= new E_IMAGE(assets, config.Win.Background);
 			
 			Add_Children([ Background_Image, Title]);
-			
-			
 			
 		}
 	}

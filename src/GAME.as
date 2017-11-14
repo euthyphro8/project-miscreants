@@ -21,9 +21,16 @@ package {
 		private var Directory:String;
 		
 		
-		private var Menu:MATCH_MENU_SCREEN
-		private var Game:MATCH_GAME_SCREEN
-		private var Win:MATCH_WIN_SCREEN
+		private var Menu:MATCH_MENU_SCREEN;
+		private var Game:MATCH_GAME_SCREEN;
+		private var Win:MATCH_WIN_SCREEN;
+		private var Info:MATCH_INFO_SCREEN;
+		
+		public static const EXIT_STATE:int = 0;
+		public static const MENU_STATE:int = 1;
+		public static const INFO_STATE:int = 2;
+		public static const GAME_STATE:int = 3;
+		public static const  WIN_STATE:int = 4;
 		
 		public static var Screen_State:int;
 		public static var Has_State_Changed:Boolean;
@@ -50,8 +57,9 @@ package {
 			Menu = new MATCH_MENU_SCREEN(Assets);
 			Game = new MATCH_GAME_SCREEN(Assets);
 			Win = new MATCH_WIN_SCREEN(Assets);
+			Info = new MATCH_INFO_SCREEN(Assets);
 			
-			Add_Children([Menu, Game, Win]);
+			Add_Children([Menu, Game, Win, Info]);
 			
 			Screen_State = 1;
 			Set_State();
@@ -71,10 +79,9 @@ package {
 			if (Has_State_Changed) 
 			{
 				Set_State();
-				trace("[GAME] Changing State: " + Screen_State);
 				Has_State_Changed = false;
 			}
-			if (Screen_State == 2) {
+			if (Screen_State == GAME.GAME_STATE) {
 				Game.Update();
 			}
 		}
@@ -86,18 +93,27 @@ package {
 		
 		public function Set_State():void 
 		{
-			if (Screen_State == 0) 
+			if (Screen_State == GAME.EXIT_STATE) 
 			{
 				//Exit
 			}
-			else if (Screen_State == 1) 
+			else if (Screen_State == GAME.MENU_STATE) 
 			{
 				//Menu Screen
 				Game.Hide();
 				Win.Hide();
 				Menu.Show();
+				Info.Hide();
 			}
-			else if (Screen_State == 2) 
+			else if (Screen_State == GAME.INFO_STATE) 
+			{
+				//Info Screen
+				Info.Show();
+				Game.Hide();
+				Win.Hide();
+				Menu.Hide();
+			}
+			else if (Screen_State == GAME.GAME_STATE) 
 			{
 				//Game Screen
 				
@@ -107,13 +123,15 @@ package {
 				Menu.Hide();
 				Win.Hide();
 				Game.Show();
+				Info.Hide();
 			}
-			else if (Screen_State == 3) 
+			else if (Screen_State == GAME.WIN_STATE) 
 			{
 				//Win Screen
 				Menu.Hide();
 				Game.Hide();
 				Win.Show();
+				Info.Hide();
 			}
 		}
 		

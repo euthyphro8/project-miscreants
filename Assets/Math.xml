@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Engine>
 		<!--Approximately two magnitudes apart-->
-		<GOD_MODE>	
+		<GOD_MODE>
 			Pool="1000000" 
 			T1Freq="1" 			T1Prob="0.000001"
 			T2Freq="99" 		T2Prob="0.000099"

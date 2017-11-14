@@ -44,8 +44,6 @@ package {
 			//Start_Message = new E_TEXT(config.Menu.Start_Message);
 			Modifier_Message = new E_TEXT(config.Menu.Modifier_Message);
 			
-			Title.Start_Flash(800, 400);
-			Title.Font_Size = 100;
 			
 			Background_Image	= new E_IMAGE(assets, config.Menu.Background);
 			
@@ -81,6 +79,9 @@ package {
 			
 			Title.Text_Format.color = 0;
 			//Title.Text_Format.size = 35;
+			
+			Title.Start_Flash(800, 400);
+			Title.Font_Size = 100;
 			
 			Modifier_Message.Text_Format.color = 0;
 			Modifier_Message.Text_Format.size = 35;
@@ -143,7 +144,7 @@ package {
 				}else {
 					trace("[MATCH_MENU_SCREEN] There was an error picking the tier! None have been seleced.");
 				}
-				GAME.Screen_State = 2;
+				GAME.Screen_State = GAME.INFO_STATE;
 				GAME.Has_State_Changed = true;
 			}
 		}

@@ -3,6 +3,7 @@ package  {
 	import Extended.E_BUTTON;
 	import Extended.E_IMAGE;
 	import flash.display.MovieClip;
+	import flash.display3D.textures.Texture;
 	import starling.display.Sprite;
 	import starling.display.MovieClip;
 	import starling.utils.AssetManager;
@@ -31,10 +32,10 @@ package  {
 			
 			
 			// ----------------------TODO: reference XML for payout values ------------------------
-			one = new TIER_DISPLAY(assets, 0, 540, "One",(String)(1000));
-			two = new TIER_DISPLAY(assets, 320, 540, "Two",(String)(2000));
-			three = new TIER_DISPLAY(assets, 640, 540, "Three",(String)(3000));
-			four = new TIER_DISPLAY(assets, 960, 540, "Four",(String)(4000));
+			one = new TIER_DISPLAY(assets, 0, 540, "One",(String)(1000), 1);
+			two = new TIER_DISPLAY(assets, 320, 540, "Two",(String)(2000), 2);
+			three = new TIER_DISPLAY(assets, 640, 540, "Three",(String)(3000), 3);
+			four = new TIER_DISPLAY(assets, 960, 540, "Four",(String)(4000), 4);
 			
 			background = new E_IMAGE(assets, config.Menu.Background);
 			Menu_Button = new E_BUTTON(assets, config.Game.Menu_Button);
@@ -94,6 +95,7 @@ package  {
 					if (freq[pick - 1] == (maxPicks - 1))
 						pick = winning_Tier;
 				}
+				trace("[MATCH_GAME_SCREEN] Pick in pool: " + pick)
 				freq[pick - 1] += 1;
 				pool.push(pick);
 			}
@@ -101,7 +103,10 @@ package  {
 			Pick_Order.push(winning_Tier);
 			for (i = 0; i < numPicks; i++ ) {
 				var index:int = Math.floor(Math.random() * pool.length);
-				Pick_Order.push(pool.removeAt(index));
+				var picked:int = pool[index];
+				trace("[MATCH_GAME_SCREEN] Pick: " + picked + " at " + index + ", with pool length " + pool.length);
+				pool.removeAt(index);
+				Pick_Order.push(picked);
 			}
 			
 			
@@ -112,46 +117,51 @@ package  {
 			//get which tier to act upon depending on the list of predetermined picks
 			var tier:int = Pick_Order.pop();
 			var display:TIER_DISPLAY;
-			if (tier == 1)
+			var chibi:String;
+			if (tier == 1) {
 				display = one;
-			else if (tier == 2)
+				chibi = "RedChibi";
+			}else if (tier == 2) {
 				display = two;
-			else if (tier == 3)
+				chibi = "PurpleChibi";
+			}else if (tier == 3){
 				display = three;
-			else if (tier == 4)
+				chibi = "GreenChibi";
+			}else if (tier == 4){
 				display = four;
-			else {
+				chibi = "BlueChibi";
+			}else {
 				display = one;
+				chibi = "RedChibi";
 				trace("[MATCH_GAME_SCREEN] Unhandeled tier number " +  tier + ", setting to one.");
 			}
 			if (display.Number_Of_Selected == 0) {
 				display.Number_Of_Selected++;
-				display.Pick_Slot_One.Flip(Assets.getTexture("Circle_Selected"), 500, display.Pick_Slot_One.x, display.Pick_Slot_One.y, 1.0/5.0, true);
+				display.Pick_Slot_One.Flip(Assets.getTexture(chibi), 500, display.Pick_Slot_One.x, display.Pick_Slot_One.y, 1, true);
 			}else if (display.Number_Of_Selected == 1) {
 				display.Number_Of_Selected++;
-				display.Pick_Slot_Two.Flip(Assets.getTexture("Circle_Selected"), 500, display.Pick_Slot_Two.x, display.Pick_Slot_Two.y, 1.0/5.0, true);
+				display.Pick_Slot_Two.Flip(Assets.getTexture(chibi), 500, display.Pick_Slot_Two.x, display.Pick_Slot_Two.y, 1, true);
 			}else if (display.Number_Of_Selected == 2) {
-			//--------------------TODO: Configure Win Animation Pre:Win Screen!!---------------------------//
 				display.Number_Of_Selected++;
-				display.Pick_Slot_Three.Flip(Assets.getTexture("Circle_Selected"), 500, display.Pick_Slot_Three.x, display.Pick_Slot_Three.y, 1.0 / 5.0, true);
-				GAME.Screen_State = 3;
+				display.Pick_Slot_Three.Flip(Assets.getTexture(chibi), 500, display.Pick_Slot_Three.x, display.Pick_Slot_Three.y, 1, true);
+				GAME.Screen_State = GAME.WIN_STATE;
 				GAME.Has_State_Changed = true;
 			}
 		}
 		
 		private function Menu_Button_Event():void 
 		{
-			GAME.Screen_State = 1;
+			GAME.Screen_State = GAME.MENU_STATE;
 			GAME.Has_State_Changed = true;
 		}
 		private function Win_Button_Event():void 
 		{
-			GAME.Screen_State = 3;
+			GAME.Screen_State = GAME.WIN_STATE;
 			GAME.Has_State_Changed = true;
 		}
 		
 		
-		public function Update():void 
+		public function Update():void
 		{
 			entity_manager.Update();
 		}

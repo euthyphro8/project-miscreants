@@ -4,7 +4,7 @@
 		<Title					X="640"		Y="100"		Width="1280"	Height="240"	Font="InkyThinPixels"		Text="Match Game"		/>
 		<Modifier_Message		X="640"		Y="405"		Width="1280"	Height="350"	Font="InkyThinPixels"		Text="Difficulty - Payout "		VAlign="center" />
 		
-		<Background				X="0"		Y="0"		Texture="autumn"			/>
+		<Background				X="0"		Y="0"		Texture="autumn"	/>
 		
 		<Start_Button			X="640"		Y="270"	 	Text="Start" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<Modifier_One_Button	X="255"		Y="540"	 	Text="Easy" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
@@ -12,7 +12,12 @@
 		<Modifier_Three_Button	X="765" 	Y="540" 	Text="Hard"			Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<Modifier_Four_Button	X="1020"	Y="540"		Text="God Mode"		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 	</Menu>
-	
+	<Info>
+		<Title					X="640"		Y="100"		Width="1280"	Height="240"	Font="InkyThinPixels"		Text="Help"		/>
+		<Info_Button			X="640"		Y="400"		Width="1280"	Height="350"	Font="InkyThinPixels"		Text="Select a chibi until you fill up a tier."		VAlign="center" />	
+		<Begin					X="640"		Y="600"	 	Text="Begin" 	Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>	
+		<Background				X="0"		Y="0"		Texture="autumn"			/>
+	</Info>
 	<Game>
 		<Menu_Button			X="640"		Y="35"	 	Text="Menu" 	Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<Win_Button				X="640"		Y="135"	 	Text="Win" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
@@ -23,18 +28,22 @@
 		<TierAmount					X="0"		Y="100"		Width="1920"		Height="350"	Font="InkyThinPixels"				/>
 		
 		<Jiggly						X="0"		Y="0"		Texture="Button"			/>
-		<FirstBubble				X="0"		Y="0"		Texture="Circle"			/>
-		<SecondBubble				X="100"		Y="0"		Texture="Circle"			/>
-		<ThirdBubble				X="200"		Y="0"		Texture="Circle"			/>
+	
+		<ChibiCoin				X="0"		Y="0"	 	Texture="YellowChibi"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
+		<ChibiDefault			X="0"		Y="0"		Texture="WhiteChibi"			/>
+		<ChibiOne				X="0"		Y="0"		Texture="BlueChibi"				/>
+		<ChibiTwo				X="0"		Y="0"		Texture="PurpleChibi"			/>
+		<ChibiThree				X="0"		Y="0"		Texture="RedChibi"				/>
+		<ChibiFour				X="0"		Y="0"		Texture="GreenChibi"			/>
 	</Tier>
 	
 	<Entity>
-		<Entity_Button			X="0"		Y="0"	 	Text="" 	Texture="Circle"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
+		<Entity_Button			X="0"		Y="0"	 	Text="" 	Texture="BlueChibi"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 	</Entity>
 	
 	<Win>
-		<Title					X="640"		Y="100"		Width="1280"	Height="240"	Font="InkyThinPixels"		Text="You Win! /Fireworks"		/>
-		<Background				X="0"		Y="0"		Texture="Background"			/>
+		<Title					X="640"		Y="300"		Width="1280"	Height="240"	Font="InkyThinPixels"		Text="You Win! /Fireworks"		/>
+		<Background				X="0"		Y="0"		Texture="blossoms"			/>
 		
 	</Win>
 	
