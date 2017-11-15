@@ -41,8 +41,9 @@ package
 		
 		public function BeginGame():void 
 		{
-				GAME.Screen_State = 3;
-				GAME.Has_State_Changed = true;
+			Begin.Text = "Resume";
+			GAME.Screen_State = 3;
+			GAME.Has_State_Changed = true;
 		}
 		
 		

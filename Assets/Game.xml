@@ -20,14 +20,15 @@
 	</Info>
 	<Game>
 		<Menu_Button			X="640"		Y="35"	 	Text="Menu" 	Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
+		<Help_Button			X="0"		Y="0"	 	Text=" ?" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<Win_Button				X="640"		Y="135"	 	Text="Win" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 	</Game>
 	
 	<Tier>
-		<TierText					X="0"		Y="0"		Width="1920"		Height="350"	Font="InkyThinPixels"				/>
-		<TierAmount					X="0"		Y="100"		Width="1920"		Height="350"	Font="InkyThinPixels"				/>
+		<TierText				X="0"		Y="0"		Width="1920"		Height="350"	Font="InkyThinPixels"				/>
+		<TierAmount				X="0"		Y="100"		Width="1920"		Height="350"	Font="InkyThinPixels"				/>
 		
-		<Jiggly						X="0"		Y="0"		Texture="Button"			/>
+		<Jiggly					X="0"		Y="0"		Texture="Button"			/>
 	
 		<ChibiCoin				X="0"		Y="0"	 	Texture="YellowChibi"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<ChibiDefault			X="0"		Y="0"		Texture="WhiteChibi"			/>

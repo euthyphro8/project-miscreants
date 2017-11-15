@@ -28,7 +28,6 @@ package {
 		public var Modifier_Three_Button:E_BUTTON;
 		public var Modifier_Four_Button:E_BUTTON;
 		
-		public var Probabilities:XML;
 		public var Winning_Tier:int;
 		
 		public var Assets:AssetManager;
@@ -36,7 +35,6 @@ package {
 		public function MATCH_MENU_SCREEN(assets:AssetManager) 
 		{
 			var config:XML = assets.getXml("Game");
-			Probabilities = assets.getXml("Math");
 			
 			this.Assets = assets;
 			
@@ -111,27 +109,26 @@ package {
 		{
 			if (Modifier > 0 && Modifier <= 4) 
 			{	
-				var pick:int, T1:int, T2:int, T3:int, T4:int, node:XMLList;
-				var pool:int;
+				var math:XML = Assets.getXml("Math");
+				var pick:int, T1:int, T2:int, T3:int, T4:int, node:XMLList, pool:int;
 				if (Modifier == 1) {
-					node = Probabilities.Easy;
+					node = math.Easy;
 				}else if (Modifier == 2) {
-					node = Probabilities.Engine.Medium;
+					node = math.Medium;
 				}else if (Modifier == 3) {
-					node = Probabilities.Probability.Hard;
+					node = math.Hard;
 				}else if (Modifier == 4) {
-					node = Probabilities.Probability.GOD_MODE;
-				}				
-				pool = int(node.@Pool);
+					node = math.GOD_MODE;
+				}
 				T1 = int(node.@T1Freq);
 				T2 = int(node.@T2Freq);
 				T3 = int(node.@T3Freq);
 				T4 = int(node.@T4Freq);
 				pick = Math.floor((Math.random() * (pool)));
 				
-				trace("Modifier: " + Modifier);
-				trace("Pool, Pick: " + pool + ", " + pick);
-				trace("T1, T2, T3, T4: " + T1 + ", " + T2+ ", " + T3+ ", " + T4);
+				trace("[MATCH_MENU_SCREEN] Modifier: " + Modifier);
+				trace("[MATCH_MENU_SCREEN] Pool, Pick: " + pool + ", " + pick);
+				trace("[MATCH_MENU_SCREEN] T1, T2, T3, T4: " + T1 + ", " + T2+ ", " + T3+ ", " + T4);
 				
 				if (pick >= 0 && pick < T1) {
 					Winning_Tier = 1;

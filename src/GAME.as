@@ -54,6 +54,11 @@ package {
 			Config	= Assets.getXml("Game");
 			Math_Config = Assets.getXml("Math");
 			
+			var fontTexture:Texture = Assets.getTexture("InkyThinPixels_0");
+			var fontxml:XML = Assets.getXml("InkyThinPixels");
+			var InkyThinPixels:BitmapFont = new BitmapFont(fontTexture, fontxml); 
+			TextField.registerCompositor(InkyThinPixels, "InkyThinPixels");
+			
 			Menu = new MATCH_MENU_SCREEN(Assets);
 			Game = new MATCH_GAME_SCREEN(Assets);
 			Win = new MATCH_WIN_SCREEN(Assets);
@@ -65,13 +70,6 @@ package {
 			Set_State();
 			
 			this.addEventListener(Event.ENTER_FRAME, Update);
-			Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, onKey_Down);
-			
-			
-			var fontTexture:Texture = Assets.getTexture("InkyThinPixels_0");
-			var fontxml:XML = Assets.getXml("InkyThinPixels");
-			var InkyThinPixels:BitmapFont = new BitmapFont(fontTexture, fontxml); 
-			TextField.registerCompositor(InkyThinPixels, "InkyThinPixels");
 		}
 
 		private function Update():void 
@@ -84,11 +82,6 @@ package {
 			if (Screen_State == GAME.GAME_STATE) {
 				Game.Update();
 			}
-		}
-		
-		private function onKey_Down(keyEvent:KeyboardEvent):void 
-		{
-			
 		}
 		
 		public function Set_State():void 
@@ -139,7 +132,6 @@ package {
 		{
 			return _Asset_Loader;
 		}
-		
 		
 	}
 }

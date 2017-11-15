@@ -21,6 +21,7 @@ package  {
 		private var background:E_IMAGE;
 		private var Menu_Button:E_BUTTON;
 		private var Win_Button:E_BUTTON;
+		private var Help_Button:E_BUTTON;
 		private var entity_manager:ENTITY_DISPLAY;
 		
 		private var Pick_Order:Vector.<int>;
@@ -37,9 +38,11 @@ package  {
 			three = new TIER_DISPLAY(assets, 640, 540, "Three",(String)(3000), 3);
 			four = new TIER_DISPLAY(assets, 960, 540, "Four",(String)(4000), 4);
 			
+			entity_manager = new ENTITY_DISPLAY(this, assets, 0, 0);
 			background = new E_IMAGE(assets, config.Menu.Background);
 			Menu_Button = new E_BUTTON(assets, config.Game.Menu_Button);
 			Win_Button = new E_BUTTON(assets, config.Game.Win_Button);
+			Help_Button = new E_BUTTON(assets, config.Game.Help_Button);
 			
 			
 			Menu_Button._Button.width = 170;
@@ -54,15 +57,21 @@ package  {
 			Win_Button._Button.y += 25;
 			Win_Button._Button.textFormat.size = 35;
 			
+			Help_Button._Button.width = 50;
+			Help_Button._Button.height = 50;
+			Help_Button._Button.x += 150;
+			Help_Button._Button.y += 50;
+			Help_Button._Button.textFormat.size = 45;
 			
 			Menu_Button.Text_Format.color = 0;
 			Win_Button.Text_Format.color = 0;
+			Help_Button.Text_Format.color = 0;
 			
-			entity_manager = new ENTITY_DISPLAY(this, assets, 0, 0);
 			
-			Add_Children([background, one, two, three, four, entity_manager ]);//, Menu_Button, Win_Button]);
+			Add_Children([background, one, two, three, four, entity_manager , Help_Button]);//, Menu_Button, Win_Button]);
 			
 			Menu_Button.addEventListener(BUTTON.EVENT_RELEASED, Menu_Button_Event);
+			Help_Button.addEventListener(BUTTON.EVENT_RELEASED, Help_Button_Event);
 			Win_Button.addEventListener(BUTTON.EVENT_RELEASED, Win_Button_Event);
 			
 		}
@@ -157,6 +166,11 @@ package  {
 		private function Win_Button_Event():void 
 		{
 			GAME.Screen_State = GAME.WIN_STATE;
+			GAME.Has_State_Changed = true;
+		}
+		private function Help_Button_Event():void 
+		{
+			GAME.Screen_State = GAME.INFO_STATE;
 			GAME.Has_State_Changed = true;
 		}
 		
