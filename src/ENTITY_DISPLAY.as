@@ -14,7 +14,7 @@ package
 		
 		private var Assets:AssetManager;
 		public var Button_Init:int;
-		public var Entity_Buttons:Vector.<E_BUTTON>;
+		public var Entities:Vector.<ENTITY>;
 		public var Anims:Vector.<MovieClip>;
 		public var Game:MATCH_GAME_SCREEN;
 		public var Number_Of_Ents:int = 12;
@@ -26,7 +26,7 @@ package
 		{
 			var config:XML = assets.getXml("Game");
 			Anims = new Vector.<MovieClip>;
-			this.Set_Position(x + 50, y + 50);
+		//	this.Set_Position(x + 50, y + 50);
 			this.Assets = assets;
 			Game = game;
 			
@@ -36,28 +36,29 @@ package
 			Button_Sounds[i] = new SOUND(assets.getSound("button_sound_" + i));
 			}
 			
-			Entity_Buttons = new <E_BUTTON>[];
+			Entities = new Vector.<ENTITY>;
 			for (i = 0; i < Number_Of_Ents; i++) {
-				Entity_Buttons[i] = (new E_BUTTON(assets, config.Tier.ChibiCoin));
-				//Entity_Buttons[i].Set_Position(i * 50, 50*(Math.random()*10));
-				Entity_Buttons[i].Set_Position(i*100,100*(Math.random()*4));
-				//Entity_Buttons[i].scale = (100. / 500);
-				Entity_Buttons[i].addEventListener(BUTTON.EVENT_TOUCHED, Entity_Button_Event(Entity_Buttons[i]));
-				Add_Children([Entity_Buttons[i]]);
+				Entities[i] = new ENTITY(assets);
+				//Entities[i].Entity_Button = (new E_BUTTON(assets, config.Tier.ChibiCoin));
+				//Entities[i].Set_Position(i * 50, 50*(Math.random()*10));
+				Entities[i].Set_Position(i*100,100*(Math.random()*4));
+				//Entities[i].scale = (100. / 500);
+				Entities[i].Entity_Button.addEventListener(BUTTON.EVENT_TOUCHED, Entity_Button_Event(Entities[i]));
+				Add_Children([Entities[i]]);
 			}
 		}
 		
 		
-		public function Entity_Button_Event(b:E_BUTTON):Function
+		public function Entity_Button_Event(ent:ENTITY):Function
 		{
 			return function():void
 			{
 				//reveal current entity_tier and fill in a bubble
 				Button_Sounds[(int)(Math.random() * 6)].Start();
 				//Button_Sound.Start();
-				b.Hide();
+				ent.RemoveEntity();
 				Game.Pass_Pick();
-				Start_Puff_Anim("default_", b.x, b.y);
+				Start_Puff_Anim("default_", ent.x, ent.y);
 			};
 		}
 		
