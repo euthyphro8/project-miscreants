@@ -30,7 +30,7 @@
 		
 		<Jiggly					X="0"		Y="0"		Texture="Button"			/>
 	
-		<ChibiCoin				X="0"		Y="0"	 	Texture="YellowChibi"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
+		<ChibiCoin				X="0"		Y="0"	 	Texture="blank"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<ChibiDefault			X="0"		Y="0"		Texture="WhiteChibi"			/>
 		<ChibiOne				X="0"		Y="0"		Texture="BlueChibi"				/>
 		<ChibiTwo				X="0"		Y="0"		Texture="PurpleChibi"			/>

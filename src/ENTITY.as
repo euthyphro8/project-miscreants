@@ -17,7 +17,7 @@ package
 		public function ENTITY(assets:AssetManager) 
 		{
 			var config:XML = assets.getXml("Game");
-			Start_Dance_Anim(assets, "default_");
+			Start_Dance_Anim(assets, "blue_");
 			Entity_Button = (new E_BUTTON(assets, config.Tier.ChibiCoin));
 			Add_Children([Entity_Button]);
 			
@@ -26,13 +26,13 @@ package
 		
 		private function Start_Dance_Anim(assets:AssetManager, type:String):void 
 		{
-			var frames:Vector.<Texture> = assets.getTextures("dancing_" + type);
+			var frames:Vector.<Texture> = assets.getTextures("" + type);
 			Anim = new MovieClip(frames, 10);
 			Anim.loop = true;
 			Anim.x = x - (Anim.width / 2);
 			Anim.y = y - (Anim.height / 2);
 			
-			Anim.scale = 0.3;
+			//Anim.scale = 0.3;
 			//Set Color if possible
 			Add_Children([Anim]);
 			Starling.juggler.add(Anim);
