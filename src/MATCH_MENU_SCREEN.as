@@ -28,6 +28,8 @@ package {
 		public var Modifier_Three_Button:E_BUTTON;
 		public var Modifier_Four_Button:E_BUTTON;
 		
+		public var Background_Music:SOUND;
+		
 		public var Winning_Tier:int;
 		
 		public var Assets:AssetManager;
@@ -93,6 +95,11 @@ package {
 			Modifier_Four_Button.Text_Format.color = 0;
 			
 			
+			
+			//maybe this should go somewhere else...
+			Background_Music = new SOUND(Assets.getSound("background_music"));
+			//Background_Music.Start();
+			Background_Music.Play_Forever();
 			
 			
 			Add_Children([ Background_Image, Title, Modifier_Message, Start_Button, Modifier_One_Button, Modifier_Two_Button, Modifier_Three_Button, Modifier_Four_Button ]);
