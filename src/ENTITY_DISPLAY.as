@@ -30,7 +30,6 @@ package
 			this.Assets = assets;
 			Game = game;
 			
-			//Button_Sound = new SOUND(assets.getSound("button_sound_0"));
 			Button_Sounds = new <SOUND>[];
 			for (var i:int = 0; i < 6; i++){
 			Button_Sounds[i] = new SOUND(assets.getSound("button_sound_" + i));

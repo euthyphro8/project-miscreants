@@ -21,6 +21,7 @@ package {
 		private var Directory:String;
 		
 		
+		
 		private var Menu:MATCH_MENU_SCREEN;
 		private var Game:MATCH_GAME_SCREEN;
 		private var Win:MATCH_WIN_SCREEN;
@@ -35,12 +36,14 @@ package {
 		public static var Screen_State:int;
 		public static var Has_State_Changed:Boolean;
 		
+		
 		public function GAME(directory:String) 
 		{
 			Directory = directory + "/";
 			_Asset_Loader = new AssetLoader(Directory, Asset_Loader_Handler);
 			_Asset_Loader.Add_Directory(Directory);
 			_Asset_Loader.Start();
+			
 		}
 
 		private function Asset_Loader_Handler(ratio:Number):void 
