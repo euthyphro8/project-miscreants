@@ -32,7 +32,7 @@
 	
 		<ChibiCoin				X="0"		Y="0"	 	Texture="blank"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<ChibiDefault			X="0"		Y="0"		Texture="WhiteChibi"			/>
-		<ChibiOne				X="0"		Y="0"		Texture="BlueChibi"				/>
+		<ChibiOne				X="0"		Y="0"		Texture="YellowChibi"				/>
 		<ChibiTwo				X="0"		Y="0"		Texture="PurpleChibi"			/>
 		<ChibiThree				X="0"		Y="0"		Texture="RedChibi"				/>
 		<ChibiFour				X="0"		Y="0"		Texture="GreenChibi"			/>

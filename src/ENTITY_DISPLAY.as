@@ -25,24 +25,32 @@ package
 		public function ENTITY_DISPLAY(game:MATCH_GAME_SCREEN, assets:AssetManager, x:int, y:int) 
 		{
 			var config:XML = assets.getXml("Game");
-			Anims = new Vector.<MovieClip>;
-		//	this.Set_Position(x + 50, y + 50);
-			this.Assets = assets;
+			Assets = assets;
 			Game = game;
-			
-			//Button_Sound = new SOUND(assets.getSound("button_sound_0"));
-			Button_Sounds = new <SOUND>[];
-			for (var i:int = 0; i < 6; i++){
-			Button_Sounds[i] = new SOUND(assets.getSound("button_sound_" + i));
-			}
-			
+			Anims = new Vector.<MovieClip>;
 			Entities = new Vector.<ENTITY>;
-			for (i = 0; i < Number_Of_Ents; i++) {
-				Entities[i] = new ENTITY(assets);
-				//Entities[i].Entity_Button = (new E_BUTTON(assets, config.Tier.ChibiCoin));
-				//Entities[i].Set_Position(i * 50, 50*(Math.random()*10));
-				Entities[i].Set_Position(i*100,100*(Math.random()*4));
-				//Entities[i].scale = (100. / 500);
+			Button_Sounds = new <SOUND>[];
+			for (var i:int = 0; i < 6; i++)
+				Button_Sounds[i] = new SOUND(assets.getSound("button_sound_" + i));
+			
+				
+				
+			var e:ENTITY = new ENTITY(assets);
+			var es:int = 75;
+			var hMargin:int = 75;
+			var vMargin:int = 125;
+			var step:int = (int)((CONFIG::SCREEN_WIDTH - (2 * hMargin)) / Number_Of_Ents);
+			var height:int = CONFIG::SCREEN_HEIGHT - 255;
+			trace(step);
+			var x:int = hMargin;
+			x -= es + 5;
+			var y:int = vMargin;
+			for(i = 0; i < Number_Of_Ents; i++) {
+				e = new ENTITY(assets);
+				Entities[i] = e;
+				x += step;
+				y = (Math.random() * height) + vMargin - es;
+				Entities[i].Set_Position(x, y);
 				Entities[i].Entity_Button.addEventListener(BUTTON.EVENT_TOUCHED, Entity_Button_Event(Entities[i]));
 				Add_Children([Entities[i]]);
 			}

@@ -82,17 +82,15 @@ package  {
 		 */
 		public function Generate_Entity_Picks(winning_Tier:int):void 
 		{
-			//--------------DEBUGGING: FIX XML PROBLEM-----------------------//
+			//--------------DEBUGGING:-----------------------//
 			trace("[MATCH_GAME_SCREEN] Winning tier is: " + winning_Tier);
 			if (winning_Tier == 0) winning_Tier = 3;
-			//---------------END DEBUGGING------------------------------------//
+			//---------------END DEBUGGING-------------------//
 			var maxPicks:int = 3;
-			var numPicks:int = Math.floor(Math.random() * (((maxPicks - 1) * 4) - (maxPicks - 1))) + (maxPicks - 1);
+			var numPicks:int = Math.floor(Math.random() * (((maxPicks - 1) * 4) - (maxPicks - 1))) + (maxPicks + 1);
 			var pool:Vector.<int> = new <int>[numPicks];
 			for (var i:int = 0; i < (maxPicks - 1); i++)
-			{
 				pool.push(winning_Tier);
-			}
 			trace("[MATCH_GAME_SCREEN] NumPicks: " + numPicks);
 			var freq:Array = new Array(0, 0, 0, 0);
 			for (i = 0; i < numPicks - (maxPicks - 1); i++)
@@ -138,7 +136,7 @@ package  {
 				chibi = "GreenChibi";
 			}else if (tier == 4){
 				display = four;
-				chibi = "BlueChibi";
+				chibi = "YellowChibi";
 			}else {
 				display = one;
 				chibi = "RedChibi";
