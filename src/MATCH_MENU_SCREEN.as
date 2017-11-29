@@ -99,7 +99,8 @@ package {
 			
 			//maybe this should go somewhere else...
 			Background_Music = new SOUND(Assets.getSound("background_music"));
-			//Background_Music.Start();
+			Background_Music.Volume = 75;
+			Background_Music.Start();
 			Background_Music.Play_Forever();
 			
 			
