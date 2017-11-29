@@ -31,6 +31,7 @@ package {
 		public var Background_Music:SOUND;
 		
 		public var Winning_Tier:int;
+		public var P1:int, P2:int, P3:int, P4:int, Payout:int;
 		
 		public var Assets:AssetManager;
 		
@@ -131,7 +132,12 @@ package {
 				T2 = int(node.@T2Freq);
 				T3 = int(node.@T3Freq);
 				T4 = int(node.@T4Freq);
+				pool = int(node.@Pool);
 				pick = Math.floor((Math.random() * (pool)));
+				P1 = int(node.@Pay1);
+				P2 = int(node.@Pay2);
+				P3 = int(node.@Pay3);
+				P4 = int(node.@Pay4);
 				
 				trace("[MATCH_MENU_SCREEN] Modifier: " + Modifier);
 				trace("[MATCH_MENU_SCREEN] Pool, Pick: " + pool + ", " + pick);
@@ -139,12 +145,16 @@ package {
 				
 				if (pick >= 0 && pick < T1) {
 					Winning_Tier = 1;
+					Payout = P1;
 				}else if (pick >= T1 && pick < T1 + T2) {
 					Winning_Tier = 2;
+					Payout = P2;
 				}else if (pick >= T1 + T2 && pick < T1 + T2 + T3) {
 					Winning_Tier = 3;
+					Payout = P3;
 				}else if (pick >= T1 + T2 + T3 && pick < T1 + T2 + T3 + T4) {
 					Winning_Tier = 4;
+					Payout = P4;
 				}else {
 					trace("[MATCH_MENU_SCREEN] There was an error picking the tier! None have been seleced.");
 				}

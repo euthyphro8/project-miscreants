@@ -2,6 +2,10 @@
 <Engine>
 		<!--Approximately two magnitudes apart-->
 		<GOD_MODE
+			Pay1="10000000"
+			Pay2="1000000"
+			Pay3="100000"
+			Pay4="1000"
 			Pool="1000000" 
 			T1Freq="1" 			T1Prob="0.000001"
 			T2Freq="99" 		T2Prob="0.000099"
@@ -12,6 +16,10 @@
 	
 		<!--Approximately single magnitudes apart-->
 		<Hard
+			Pay1="100000"
+			Pay2="10000"
+			Pay3="1000"
+			Pay4="100"
 			Pool="1000"
 			T1Freq="1" 		T1Prob="0.001"
 			T2Freq="9" 		T2Prob="0.009"
@@ -21,6 +29,10 @@
 		
 		<!-- Approximately half magnitudes apart-->
 		<Medium
+			Pay1="10000"
+			Pay2="1000"
+			Pay3="100"
+			Pay4="10"
 			Pool="10000"
 			T1Freq="63" 	T1Prob="0.0063"
 			T2Freq="323" 	T2Prob="0.0323"
@@ -30,6 +42,10 @@
 		
 		<!--Approximately 1/3 magnitudes apart-->
 		<Easy
+			Pay1="1000"
+			Pay2="100"
+			Pay3="10"
+			Pay4="1"
 			Pool="1000"
 			T1Freq="25" 	T1Prob="0.025"
 			T2Freq="75" 	T2Prob="0.075"

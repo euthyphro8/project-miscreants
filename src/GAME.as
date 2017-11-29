@@ -63,13 +63,12 @@ package {
 			TextField.registerCompositor(InkyThinPixels, "InkyThinPixels");
 			
 			Menu = new MATCH_MENU_SCREEN(Assets);
-			Game = new MATCH_GAME_SCREEN(Assets);
 			Win = new MATCH_WIN_SCREEN(Assets);
 			Info = new MATCH_INFO_SCREEN(Assets);
 			
-			Add_Children([Menu, Game, Win, Info]);
+			Add_Children([Menu, Win, Info]);
 			
-			Screen_State = 1;
+			Screen_State = GAME.MENU_STATE;
 			Set_State();
 			
 			this.addEventListener(Event.ENTER_FRAME, Update);
@@ -82,8 +81,13 @@ package {
 				Set_State();
 				Has_State_Changed = false;
 			}
-			if (Screen_State == GAME.GAME_STATE) {
+			if (Screen_State == GAME.GAME_STATE && Game) 
+			{
 				Game.Update();
+			}
+			else if (Screen_State == GAME.WIN_STATE) 
+			{
+				Win.Update();
 			}
 		}
 		
@@ -96,7 +100,7 @@ package {
 			else if (Screen_State == GAME.MENU_STATE) 
 			{
 				//Menu Screen
-				Game.Hide();
+				if(Game) Game.Hide();
 				Win.Hide();
 				Menu.Show();
 				Info.Hide();
@@ -105,7 +109,7 @@ package {
 			{
 				//Info Screen
 				Info.Show();
-				Game.Hide();
+				if(Game) Game.Hide();
 				Win.Hide();
 				Menu.Hide();
 			}
@@ -113,8 +117,10 @@ package {
 			{
 				//Game Screen
 				
+				Game = new MATCH_GAME_SCREEN(Assets, Menu.P4, Menu.P3, Menu.P2, Menu.P1);
 				//Get predetermined winning tier from menu and pass it to game
 				Game.Generate_Entity_Picks(Menu.Winning_Tier);
+				addChild(Game);
 				
 				Menu.Hide();
 				Win.Hide();
@@ -125,8 +131,9 @@ package {
 			{
 				//Win Screen
 				Menu.Hide();
-				Game.Hide();
+				if(Game) Game.Hide();
 				Win.Show();
+				Win.Title.Text = "You Win \n" + Menu.Payout + "!";
 				Info.Hide();
 			}
 		}

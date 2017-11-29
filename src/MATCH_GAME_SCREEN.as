@@ -26,24 +26,27 @@ package  {
 		
 		private var Pick_Order:Vector.<int>;
 		
-		public function MATCH_GAME_SCREEN(assets:AssetManager) 
+		public function MATCH_GAME_SCREEN(assets:AssetManager, p1:int, p2:int, p3:int, p4:int) 
 		{
 			Assets = assets;
 			var config:XML = assets.getXml("Game");
 			
 			
 			// ----------------------TODO: reference XML for payout values ------------------------
-			one = new TIER_DISPLAY(assets, 0, 540, "One",(String)(1000), 1);
-			two = new TIER_DISPLAY(assets, 320, 540, "Two",(String)(2000), 2);
-			three = new TIER_DISPLAY(assets, 640, 540, "Three",(String)(3000), 3);
-			four = new TIER_DISPLAY(assets, 960, 540, "Four",(String)(4000), 4);
+			one = new TIER_DISPLAY(assets, 0, 540, "One",(String)(p1), 1);
+			two = new TIER_DISPLAY(assets, 320, 540, "Two",(String)(p2), 2);
+			three = new TIER_DISPLAY(assets, 640, 540, "Three",(String)(p3), 3);
+			four = new TIER_DISPLAY(assets, 960, 540, "Four",(String)(p4), 4);
 			
 			entity_manager = new ENTITY_DISPLAY(this, assets, 0, 0);
-			background = new E_IMAGE(assets, config.Menu.Background);
+			background = new E_IMAGE(assets, config.Game.Background);
 			Menu_Button = new E_BUTTON(assets, config.Game.Menu_Button);
 			Win_Button = new E_BUTTON(assets, config.Game.Win_Button);
 			Help_Button = new E_BUTTON(assets, config.Game.Help_Button);
 			
+			
+			background.width = CONFIG::VIEWPORT_WIDTH;
+			background.height = CONFIG::VIEWPORT_HEIGHT;
 			
 			Menu_Button._Button.width = 170;
 			Menu_Button._Button.height = 60;
@@ -176,8 +179,6 @@ package  {
 		public function Update():void
 		{
 			entity_manager.Update();
-		}
-		
+		}	
 	}
-
 }

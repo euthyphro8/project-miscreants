@@ -22,6 +22,7 @@
 		<Menu_Button			X="640"		Y="35"	 	Text="Menu" 	Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<Help_Button			X="0"		Y="0"	 	Text=" ?" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<Win_Button				X="640"		Y="135"	 	Text="Win" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
+		<Background				X="0"		Y="0"		Texture="dancefloor"	/>
 	</Game>
 	
 	<Tier>
@@ -43,7 +44,7 @@
 	</Entity>
 	
 	<Win>
-		<Title					X="640"		Y="300"		Width="1280"	Height="240"	Font="InkyThinPixels"		Text="You Win! /Fireworks"		/>
+		<Title					X="320"		Y="150"		Width="1280"	Height="240"	Font="InkyThinPixels"		Text="You Win!"		/>
 		<Background				X="0"		Y="0"		Texture="blossoms"			/>
 		
 	</Win>
