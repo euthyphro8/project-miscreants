@@ -38,7 +38,8 @@
 		<Entity_Button			X="0"		Y="0"	 	Text="" 	Texture="BlueChibi"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 	</Entity>
 	<Win>
-		<Title					X="320"		Y="150"		Width="1280"	Height="240"	Font="MetalLord"		Text="You Win!"		/>
+		<Congrats				X="375"		Y="150"		Width="1280"	Height="240"	Font="Metal Lord"		Text="Congratulations!"		/>
+		<Payout					X="640"		Y="500"		Width="1280"	Height="480"	Font="Metal Lord"		Text="You Win!"		/>
 		<Background				X="0"		Y="0"		Texture="blossoms"			/>
 	</Win>
 </Engine>

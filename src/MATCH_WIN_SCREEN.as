@@ -8,26 +8,32 @@ package
 	public class MATCH_WIN_SCREEN extends DISPLAY 
 	{
 		
-		public var Title:E_TEXT;
+		public var Congrats:E_TEXT;
+		public var Payout:E_TEXT;
 		public var Background_Image:E_IMAGE;
-		public var puff:MovieClip;
+		public var Puff:MovieClip;
 		public var Firework:FIREWORK;
 		
 		public function MATCH_WIN_SCREEN(assets:AssetManager) 
 		{
 			var config:XML = assets.getXml("Game");
+			var text_color:int = 0x1CB261;
 			
-			Title = new E_TEXT(config.Win.Title);
 			Background_Image= new E_IMAGE(assets, config.Win.Background);
 			
-			Title.Start_Flash(800, 400);
-			Title.Font_Size = 100;
+			Congrats = new E_TEXT(config.Win.Congrats);
+			
+			Congrats.Start_Flash(800, 400);
+			Congrats.Font_Size = 80;
+			Congrats.Text_Format.color = text_color;
 			
 			
-			Title.Text_Format.color = 0xFF0000;
+			Payout = new E_TEXT(config.Win.Payout);
 			
-			Add_Children([ Background_Image, Title]);
+			Payout.Font_Size = 150;
+			Payout.Text_Format.color = text_color;
 			
+			Add_Children([ Background_Image, Congrats, Payout ]);
 		}
 		
 		

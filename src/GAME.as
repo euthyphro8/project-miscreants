@@ -57,12 +57,12 @@ package {
 			Config	= Assets.getXml("Game");
 			Math_Config = Assets.getXml("Math");
 			
-			var fontTexture:Texture = Assets.getTexture("InkyThinPixels_0");
-			var fontxml:XML = Assets.getXml("InkyThinPixels");
-			var fontTexture2:Texture = Assets.getTexture("MetalLord_0");
-			var fontxml2:XML = Assets.getXml("MetalLord");
-			var InkyThinPixels:BitmapFont = new BitmapFont(fontTexture, fontxml); 
-			var MetalLord:BitmapFont = new BitmapFont(fontTexture2, fontxml2);
+			var inkyTexture:Texture = Assets.getTexture("InkyThinPixels_0");
+			var inkyXML:XML = Assets.getXml("InkyThinPixels");
+			var metalLordTexture:Texture = Assets.getTexture("MetalLord_0.png");
+			var metalLordXML:XML = Assets.getXml("MetalLord.xml");
+			var InkyThinPixels:BitmapFont = new BitmapFont(inkyTexture, inkyXML); 
+			var MetalLord:BitmapFont = new BitmapFont(metalLordTexture, metalLordXML);
 			TextField.registerCompositor(InkyThinPixels, "InkyThinPixels");
 			TextField.registerCompositor(MetalLord, "MetalLord");
 			
@@ -74,6 +74,7 @@ package {
 			Add_Children([Menu, Win, Info]);
 			
 			Screen_State = GAME.MENU_STATE;
+			
 			Set_State();
 			
 			this.addEventListener(Event.ENTER_FRAME, Update);
@@ -135,7 +136,7 @@ package {
 			else if (Screen_State == GAME.WIN_STATE) 
 			{
 				//Win Screen
-				Win.Title.Text = "You Win \n" + Menu.Payout + "!";
+				Win.Payout.Text = "You Win $" + Menu.Payout + "!";
 				
 				Menu.Hide();
 				Game.Hide();

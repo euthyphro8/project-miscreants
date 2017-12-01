@@ -34,9 +34,9 @@ package  {
 			
 			// ----------------------TODO: reference XML for payout values ------------------------
 			Tier_One = new TIER_DISPLAY(assets, 0, 540, "God", 1);
-			Tier_Two = new TIER_DISPLAY(assets, 320, 540, "Emporer", 2);
-			Tier_Three = new TIER_DISPLAY(assets, 640, 540, "King", 3);
-			Tier_Four = new TIER_DISPLAY(assets, 960, 540, "Bitch", 4);
+			Tier_Two = new TIER_DISPLAY(assets, 320, 540, "King", 2);
+			Tier_Three = new TIER_DISPLAY(assets, 640, 540, "Lord", 3);
+			Tier_Four = new TIER_DISPLAY(assets, 960, 540, "Peasant", 4);
 			
 			Entity_Display = new ENTITY_DISPLAY(this, assets, 0, 0);
 			Background = new E_IMAGE(assets, config.Game.Background);
