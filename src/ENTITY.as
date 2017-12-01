@@ -10,7 +10,6 @@ package
 	
 	public class ENTITY extends DISPLAY
 	{
-		
 		public var Entity_Button:E_BUTTON;
 		public var Anim:MovieClip;
 		

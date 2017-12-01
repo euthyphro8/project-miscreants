@@ -3,9 +3,7 @@
 	<Menu>
 		<Title					X="640"		Y="100"		Width="1280"	Height="240"	Font="InkyThinPixels"		Text="Match Game"		/>
 		<Modifier_Message		X="640"		Y="405"		Width="1280"	Height="350"	Font="InkyThinPixels"		Text="Difficulty - Payout "		VAlign="center" />
-		
 		<Background				X="0"		Y="0"		Texture="autumn"	/>
-		
 		<Start_Button			X="640"		Y="270"	 	Text="Start" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<Modifier_One_Button	X="255"		Y="540"	 	Text="Easy" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<Modifier_Two_Button	X="510"		Y="540"		Text="Medium"		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
@@ -24,13 +22,11 @@
 		<Win_Button				X="640"		Y="135"	 	Text="Win" 		Texture="Button"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<Background				X="0"		Y="0"		Texture="dancefloor"	/>
 	</Game>
-	
 	<Tier>
 		<TierText				X="0"		Y="0"		Width="1920"		Height="350"	Font="InkyThinPixels"				/>
 		<TierAmount				X="0"		Y="100"		Width="1920"		Height="350"	Font="InkyThinPixels"				/>
+		<Background				X="0"		Y="0"		Texture="tier_background"	/>
 		
-		<Jiggly					X="0"		Y="0"		Texture="Button"			/>
-	
 		<ChibiCoin				X="0"		Y="0"	 	Texture="blank"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 		<ChibiDefault			X="0"		Y="0"		Texture="WhiteChibi"			/>
 		<ChibiOne				X="0"		Y="0"		Texture="YellowChibi"				/>
@@ -38,15 +34,11 @@
 		<ChibiThree				X="0"		Y="0"		Texture="RedChibi"				/>
 		<ChibiFour				X="0"		Y="0"		Texture="GreenChibi"			/>
 	</Tier>
-	
 	<Entity>
 		<Entity_Button			X="0"		Y="0"	 	Text="" 	Texture="BlueChibi"		Align_Pivot="TRUE"		Font="InkyThinPixels"		Enabled="TRUE"	/>
 	</Entity>
-	
 	<Win>
-		<Title					X="320"		Y="150"		Width="1280"	Height="240"	Font="InkyThinPixels"		Text="You Win!"		/>
+		<Title					X="320"		Y="150"		Width="1280"	Height="240"	Font="MetalLord"		Text="You Win!"		/>
 		<Background				X="0"		Y="0"		Texture="blossoms"			/>
-		
 	</Win>
-	
 </Engine>

@@ -59,10 +59,15 @@ package {
 			
 			var fontTexture:Texture = Assets.getTexture("InkyThinPixels_0");
 			var fontxml:XML = Assets.getXml("InkyThinPixels");
+			var fontTexture2:Texture = Assets.getTexture("MetalLord_0");
+			var fontxml2:XML = Assets.getXml("MetalLord");
 			var InkyThinPixels:BitmapFont = new BitmapFont(fontTexture, fontxml); 
+			var MetalLord:BitmapFont = new BitmapFont(fontTexture2, fontxml2);
 			TextField.registerCompositor(InkyThinPixels, "InkyThinPixels");
+			TextField.registerCompositor(MetalLord, "MetalLord");
 			
 			Menu = new MATCH_MENU_SCREEN(Assets);
+			Game = new MATCH_GAME_SCREEN(Assets);
 			Win = new MATCH_WIN_SCREEN(Assets);
 			Info = new MATCH_INFO_SCREEN(Assets);
 			
@@ -100,7 +105,7 @@ package {
 			else if (Screen_State == GAME.MENU_STATE) 
 			{
 				//Menu Screen
-				if(Game) Game.Hide();
+				Game.Hide();
 				Win.Hide();
 				Menu.Show();
 				Info.Hide();
@@ -109,7 +114,7 @@ package {
 			{
 				//Info Screen
 				Info.Show();
-				if(Game) Game.Hide();
+				Game.Hide();
 				Win.Hide();
 				Menu.Hide();
 			}
@@ -117,9 +122,9 @@ package {
 			{
 				//Game Screen
 				
-				Game = new MATCH_GAME_SCREEN(Assets, Menu.P4, Menu.P3, Menu.P2, Menu.P1);
 				//Get predetermined winning tier from menu and pass it to game
 				Game.Generate_Entity_Picks(Menu.Winning_Tier);
+				Game.Set_Payouts(Menu.P1, Menu.P2, Menu.P3, Menu.P4);
 				addChild(Game);
 				
 				Menu.Hide();
@@ -130,10 +135,11 @@ package {
 			else if (Screen_State == GAME.WIN_STATE) 
 			{
 				//Win Screen
-				Menu.Hide();
-				if(Game) Game.Hide();
-				Win.Show();
 				Win.Title.Text = "You Win \n" + Menu.Payout + "!";
+				
+				Menu.Hide();
+				Game.Hide();
+				Win.Show();
 				Info.Hide();
 			}
 		}

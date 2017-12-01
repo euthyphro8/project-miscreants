@@ -96,7 +96,6 @@ package {
 			Modifier_Four_Button.Text_Format.color = 0;
 			
 			
-			
 			//maybe this should go somewhere else...
 			Background_Music = new SOUND(Assets.getSound("background_music"));
 			Background_Music.Volume = 75;

@@ -23,7 +23,7 @@ package  {
 		public var Tier_Amount:E_TEXT;
 		
 		
-		public function TIER_DISPLAY(assets:AssetManager, x:int, y:int, tier_name:String, tier_amount:String, tier_num:int) 
+		public function TIER_DISPLAY(assets:AssetManager, x:int, y:int, tier_name:String, tier_num:int) 
 		{
 			var config:XML = assets.getXml("Game");
 			Display_Width = 320;
@@ -42,11 +42,11 @@ package  {
 			Tier_Text.Text = "Tier: " + tier_name;
 			
 			Tier_Amount.Font_Size = 25;
-			Tier_Amount.Text = tier_amount;
+			Tier_Amount.Text = "0";
 			Tier_Amount.Text_Format.color = 0;
 			
 			//Start_Button = new E_BUTTON(assets, config.Menu.Start_Button);
-			Tier_Background	= new E_IMAGE(assets, config.Tier.Jiggly);
+			Tier_Background	= new E_IMAGE(assets, config.Tier.Background);
 			
 			Pick_Slot_One = new E_IMAGE(assets, config.Tier.ChibiDefault);
 			Pick_Slot_Two = new E_IMAGE(assets, config.Tier.ChibiDefault);
@@ -60,11 +60,9 @@ package  {
 			Tier_Background.width = Display_Width;
 			Tier_Background.height = Display_Height;
 			
-			
-			
+				
 			Add_Children([Tier_Background, Pick_Slot_One,Pick_Slot_Two,Pick_Slot_Three,Tier_Text,Tier_Amount]);
 		
-			
 		}
 		
 	}

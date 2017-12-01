@@ -67,9 +67,19 @@ package
 				ent.RemoveEntity();
 				Game.Pass_Pick();
 				Start_Puff_Anim("default_", ent.x, ent.y);
+				//Entities.removeAt(Entities.indexOf(ent));
 			};
 		}
-		
+		public function Remove_All():void
+		{
+			while (Entities.length > 0)
+			{
+				Start_Puff_Anim("default_", Entities[0].x, Entities[0].y);
+				Entities[0].RemoveEntity();
+				Entities.removeAt(0);
+				
+			}
+		}
 		
 		private function Start_Puff_Anim(type:String, x:int, y:int):void 
 		{
