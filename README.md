@@ -1,4 +1,4 @@
-# Dancing Chances by Project Miscreants
+# Dancing Chances by Team Miscreants
 
 University team project for a software engineering class. A simple matching game for a casino slot machine bonus round with an anime theme.
 All assets were either made by a member of the team or found online copyright free.
