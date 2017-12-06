@@ -144,15 +144,19 @@ package {
 				trace("[MATCH_MENU_SCREEN] T1, T2, T3, T4: " + T1 + ", " + T2+ ", " + T3+ ", " + T4);
 				
 				if (pick >= 0 && pick < T1) {
+					//Easy
 					Winning_Tier = 1;
 					Payout = P1;
 				}else if (pick >= T1 && pick < T1 + T2) {
+					//Medium
 					Winning_Tier = 2;
 					Payout = P2;
 				}else if (pick >= T1 + T2 && pick < T1 + T2 + T3) {
+					//Hard
 					Winning_Tier = 3;
 					Payout = P3;
 				}else if (pick >= T1 + T2 + T3 && pick < T1 + T2 + T3 + T4) {
+					//God Mode
 					Winning_Tier = 4;
 					Payout = P4;
 				}else {
@@ -160,6 +164,15 @@ package {
 				}
 				GAME.Screen_State = GAME.INFO_STATE;
 				GAME.Has_State_Changed = true;
+			} 
+			else
+			{
+				Modifier_Message.Text = "Select a difficult to begin.\nNote a difficulty corresponds to the payout."
+				Modifier_Message.Start_Flash(100, 100);
+				Starling.juggler.delayCall(
+						function():void {
+							Modifier_Message.Stop_Flash();
+						}, 1.0);
 			}
 		}
 		private function SetModifierOne():void 

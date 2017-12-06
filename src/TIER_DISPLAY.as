@@ -56,7 +56,6 @@ package  {
 			Pick_Slot_Two.Set_Position(100+10, 5);
 			Pick_Slot_Three.Set_Position(2*100+15, 5);
 			
-			
 			Tier_Background.width = Display_Width;
 			Tier_Background.height = Display_Height;
 			

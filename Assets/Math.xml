@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Engine>
-		<!--Approximately two magnitudes apart-->
+		<!--Approximately two orders of magnitude apart -->
 		<GOD_MODE
-			Pay1="10000000"
-			Pay2="1000000"
+			Pay1="10000000000000"
+			Pay2="1000000000"
 			Pay3="100000"
-			Pay4="1000"
-			Pool="1000000" 
+			Pay4="10"
+			Pool="1000000"
 			T1Freq="1" 			T1Prob="0.000001"
 			T2Freq="99" 		T2Prob="0.000099"
 			T3Freq="9900" 		T3Prob="0.0099"
@@ -14,12 +14,12 @@
 		/>
 	
 	
-		<!--Approximately single magnitudes apart-->
+		<!--Approximately one order of magnitude apart-->
 		<Hard
-			Pay1="100000"
-			Pay2="10000"
-			Pay3="1000"
-			Pay4="100"
+			Pay1="10000000000"
+			Pay2="10000000"
+			Pay3="10000"
+			Pay4="10"
 			Pool="1000"
 			T1Freq="1" 		T1Prob="0.001"
 			T2Freq="9" 		T2Prob="0.009"
@@ -27,11 +27,11 @@
 			T4Freq="900" 	T4Prob="0.9"
 		/>
 		
-		<!-- Approximately half magnitudes apart-->
+		<!--Approximately negative one seventh an order of magnitude apart-->
 		<Medium
-			Pay1="10000"
-			Pay2="1000"
-			Pay3="100"
+			Pay1="10000000"
+			Pay2="100000"
+			Pay3="1000"
 			Pay4="10"
 			Pool="10000"
 			T1Freq="63" 	T1Prob="0.0063"
@@ -40,12 +40,12 @@
 			T4Freq="8012" 	T4Prob="0.8012"
 		/>
 		
-		<!--Approximately 1/3 magnitudes apart-->
+		<!--Approximately negative one half an order of magnitude apart-->
 		<Easy
-			Pay1="1000"
-			Pay2="100"
-			Pay3="10"
-			Pay4="1"
+			Pay1="10000"
+			Pay2="1000"
+			Pay3="100"
+			Pay4="10"
 			Pool="1000"
 			T1Freq="25" 	T1Prob="0.025"
 			T2Freq="75" 	T2Prob="0.075"

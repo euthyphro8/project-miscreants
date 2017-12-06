@@ -31,8 +31,6 @@ package  {
 			Assets = assets;
 			var config:XML = assets.getXml("Game");
 			
-			
-			// ----------------------TODO: reference XML for payout values ------------------------
 			Tier_One = new TIER_DISPLAY(assets, 0, 540, "God", 1);
 			Tier_Two = new TIER_DISPLAY(assets, 320, 540, "King", 2);
 			Tier_Three = new TIER_DISPLAY(assets, 640, 540, "Lord", 3);
@@ -46,7 +44,7 @@ package  {
 			
 			
 			Background.width = CONFIG::VIEWPORT_WIDTH;
-			Background.height = CONFIG::VIEWPORT_HEIGHT;
+			Background.height = CONFIG::VIEWPORT_HEIGHT - Tier_One.Tier_Background.height;
 			
 			Menu_Button._Button.width = 170;
 			Menu_Button._Button.height = 60;
@@ -106,13 +104,16 @@ package  {
 			trace("[MATCH_GAME_SCREEN] Number of Picks: " + numPicks);
 			
 			//The pool of picks that we will randomly draw from
-			var pool:Vector.<int> = new <int>[numPicks];
+			var pool:Vector.<int> = new <int>[];
 			
 			//To make sure the winning tier has at least 3 picks in the list 
 			//Two here to be ordered randomly and the final one added later to be last in the list
 			for (var i:int = 0; i < (maxPicks - 1); i++)
+			{
 				pool.push(winning_Tier);
-				
+				trace("[MATCH_GAME_SCREEN] Added to pick pool: " + winning_Tier);
+			}
+			
 			//We initialize a frequency array to allow us to check that no tier is added more than 
 			//twice to verify our chosen winning tier will be the actual winning tier
 			var freq:Array = new Array(0, 0, 0, 0);
@@ -141,7 +142,8 @@ package  {
 			
 			//First push the winning tier so it will be the last on picked
 			Pick_Order.push(winning_Tier);
-			for (i = 0; i < numPicks; i++ ) {
+				trace("[MATCH_GAME_SCREEN] Pick: Final Winning Pick " + winning_Tier);
+			for (i = 0; i < numPicks - 1; i++ ) {
 				
 				//We then randomly pick from our pool and push it into our pick order list
 				var index:int = Math.floor(Math.random() * pool.length);
@@ -184,9 +186,9 @@ package  {
 			}
 			else 
 			{
-				display = Tier_One;
+				display = Tier_Four;
 				chibi = "RedChibi";
-				trace("[MATCH_GAME_SCREEN] Unhandeled tier number " +  tier + ", setting to one.");
+				trace("[MATCH_GAME_SCREEN] Unhandeled tier number " +  tier + ", setting to four.");
 			}
 			if (display.Number_Of_Selected == 0) 
 			{
@@ -211,7 +213,7 @@ package  {
 						function():void { 
 							GAME.Screen_State = GAME.WIN_STATE;
 							GAME.Has_State_Changed = true; 
-						}, 3.0);
+						}, 2.0);
 			Entity_Display.Remove_All();
 				
 		}
