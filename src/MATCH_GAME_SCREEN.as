@@ -82,7 +82,7 @@ package  {
 			
 		}
 		
-		public function Set_Payouts(p1:int, p2:int, p3:int, p4:int):void 
+		public function Set_Payouts(p1:uint, p2:uint, p3:uint, p4:uint):void 
 		{
 			Tier_One.Tier_Amount.Text = String(p1);
 			Tier_Two.Tier_Amount.Text = String(p2);

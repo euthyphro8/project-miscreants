@@ -130,9 +130,9 @@ package {
 				Game.Set_Payouts(Menu.P1, Menu.P2, Menu.P3, Menu.P4);
 				
 				
-				Menu.Background_Music.Fade_Stop();
+				Menu.Background_Music.Stop();
 				if(!Game.Background_Music.Playing)
-				Game.Background_Music.Play_Forever();
+					Game.Background_Music.Play_Forever();
 				
 				Menu.Hide();
 				Win.Hide();
@@ -145,7 +145,7 @@ package {
 				Win.Payout.Text = "You Win $" + Menu.Payout + "!";
 				
 				
-				Game.Background_Music.Fade_Stop();
+				Game.Background_Music.Stop();
 				Win.Background_Music.Play_Forever();
 				
 				Menu.Hide();

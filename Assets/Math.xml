@@ -2,9 +2,9 @@
 <Engine>
 		<!--Approximately two orders of magnitude apart -->
 		<GOD_MODE
-			Pay1="10000000000000"
-			Pay2="1000000000"
-			Pay3="100000"
+			Pay1="1000000000"
+			Pay2="1000000"
+			Pay3="1000"
 			Pay4="10"
 			Pool="1000000"
 			T1Freq="1" 			T1Prob="0.000001"
@@ -16,9 +16,9 @@
 	
 		<!--Approximately one order of magnitude apart-->
 		<Hard
-			Pay1="10000000000"
-			Pay2="10000000"
-			Pay3="10000"
+			Pay1="100000000"
+			Pay2="100000"
+			Pay3="1000"
 			Pay4="10"
 			Pool="1000"
 			T1Freq="1" 		T1Prob="0.001"
@@ -29,9 +29,9 @@
 		
 		<!--Approximately negative one seventh an order of magnitude apart-->
 		<Medium
-			Pay1="10000000"
-			Pay2="100000"
-			Pay3="1000"
+			Pay1="1000000"
+			Pay2="10000"
+			Pay3="100"
 			Pay4="10"
 			Pool="10000"
 			T1Freq="63" 	T1Prob="0.0063"
