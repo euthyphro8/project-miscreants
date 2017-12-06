@@ -34,8 +34,8 @@ package  {
 			
 			Tier_Text = new E_TEXT(config.Tier.TierText);
 			Tier_Amount = new E_TEXT(config.Tier.TierAmount);
-			Tier_Text.Set_Position((int)(Display_Width / 2), (int)(Display_Height *.7));
-			Tier_Amount.Set_Position((int)(Display_Width / 2), (int)(Display_Height * .9));
+			Tier_Text.Set_Position((int)(Display_Width / 2), (int)(Display_Height *.8));
+			Tier_Amount.Set_Position((int)(Display_Width / 2), (int)(Display_Height * .65));
 			
 			Tier_Text.Font_Size = 25;
 			Tier_Text.Text_Format.color = 0;
@@ -52,9 +52,9 @@ package  {
 			Pick_Slot_Two = new E_IMAGE(assets, config.Tier.ChibiDefault);
 			Pick_Slot_Three = new E_IMAGE(assets, config.Tier.ChibiDefault);
 			
-			Pick_Slot_One.Set_Position(5, 5);
-			Pick_Slot_Two.Set_Position(100+10, 5);
-			Pick_Slot_Three.Set_Position(2*100+15, 5);
+			Pick_Slot_One.Set_Position((int)(Display_Width*.1), (int)(Display_Height*.1));
+			Pick_Slot_Two.Set_Position((int)(Display_Width*.4), (int)(Display_Height*.1));
+			Pick_Slot_Three.Set_Position((int)(Display_Width*.7), (int)(Display_Height*.1));
 			
 			Tier_Background.width = Display_Width;
 			Tier_Background.height = Display_Height;

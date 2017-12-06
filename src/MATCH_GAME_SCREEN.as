@@ -26,6 +26,8 @@ package  {
 		
 		private var Pick_Order:Vector.<int>;
 		
+		public var Background_Music:SOUND;
+		
 		public function MATCH_GAME_SCREEN(assets:AssetManager) 
 		{
 			Assets = assets;
@@ -67,6 +69,9 @@ package  {
 			Menu_Button.Text_Format.color = 0;
 			Win_Button.Text_Format.color = 0;
 			Help_Button.Text_Format.color = 0;
+			
+			Background_Music = new SOUND(Assets.getSound("background_music_fast"));
+			Background_Music.Volume = 75;
 			
 			
 			Add_Children([Background, Tier_One, Tier_Two, Tier_Three, Tier_Four, Entity_Display , Help_Button]);//, Menu_Button, Win_Button]);
