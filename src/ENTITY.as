@@ -26,7 +26,7 @@ package
 		private function Start_Dance_Anim(assets:AssetManager, type:String):void 
 		{
 			var frames:Vector.<Texture> = assets.getTextures("" + type);
-			Anim = new MovieClip(frames, 15);
+			Anim = new MovieClip(frames, 20);
 			Anim.loop = true;
 			Anim.x = x - (Anim.width / 1.9);
 			Anim.y = y - (Anim.height / 1.75);

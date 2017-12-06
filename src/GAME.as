@@ -71,7 +71,7 @@ package {
 			Win = new MATCH_WIN_SCREEN(Assets);
 			Info = new MATCH_INFO_SCREEN(Assets);
 			
-			Add_Children([Menu, Win, Info]);
+			Add_Children([Game, Menu, Win, Info]);
 			
 			Screen_State = GAME.MENU_STATE;
 			
@@ -105,6 +105,8 @@ package {
 			}
 			else if (Screen_State == GAME.MENU_STATE) 
 			{
+				
+				Menu.Background_Music.Play_Forever();
 				//Menu Screen
 				Game.Hide();
 				Win.Hide();
@@ -126,7 +128,11 @@ package {
 				//Get predetermined winning tier from menu and pass it to game
 				Game.Generate_Entity_Picks(Menu.Winning_Tier);
 				Game.Set_Payouts(Menu.P1, Menu.P2, Menu.P3, Menu.P4);
-				addChild(Game);
+				
+				
+				Menu.Background_Music.Fade_Stop();
+				if(!Game.Background_Music.Playing)
+				Game.Background_Music.Play_Forever();
 				
 				Menu.Hide();
 				Win.Hide();
@@ -137,6 +143,10 @@ package {
 			{
 				//Win Screen
 				Win.Payout.Text = "You Win $" + Menu.Payout + "!";
+				
+				
+				Game.Background_Music.Fade_Stop();
+				Win.Background_Music.Play_Forever();
 				
 				Menu.Hide();
 				Game.Hide();

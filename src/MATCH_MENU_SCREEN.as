@@ -99,8 +99,6 @@ package {
 			//maybe this should go somewhere else...
 			Background_Music = new SOUND(Assets.getSound("background_music"));
 			Background_Music.Volume = 75;
-			Background_Music.Start();
-			Background_Music.Play_Forever();
 			
 			
 			Add_Children([ Background_Image, Title, Modifier_Message, Start_Button, Modifier_One_Button, Modifier_Two_Button, Modifier_Three_Button, Modifier_Four_Button ]);

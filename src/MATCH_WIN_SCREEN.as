@@ -13,6 +13,8 @@ package
 		public var Background_Image:E_IMAGE;
 		public var Puff:MovieClip;
 		public var Firework:FIREWORK;
+		public var Firework_Sound:SOUND;
+		public var Background_Music:SOUND;
 		
 		public function MATCH_WIN_SCREEN(assets:AssetManager) 
 		{
@@ -33,6 +35,13 @@ package
 			Payout.Font_Size = 150;
 			Payout.Text_Format.color = text_color;
 			
+			
+			Firework_Sound = new SOUND(assets.getSound("firework_sound"));
+			Firework_Sound.Volume = 100;
+			Background_Music = new SOUND(assets.getSound("background_music"));
+			Background_Music.Volume = 50;
+			
+			
 			Add_Children([ Background_Image, Congrats, Payout ]);
 		}
 		
@@ -48,12 +57,15 @@ package
 					removeChild(Firework);
 					Firework = generateFirework();
 					addChild(Firework);
+					Firework_Sound.Start();
+					
 				}	
 			}
 			else 
 			{
 				Firework = generateFirework();
 				addChild(Firework);
+				Firework_Sound.Start();
 			}
 			
 		}
